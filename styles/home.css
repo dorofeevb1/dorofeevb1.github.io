@@ -1,0 +1,890 @@
+/* Section 3 */
+.section-3 {
+  padding: 60px 0;
+}
+.section-3 .tile-wrapper {
+  position: relative;
+}
+.section-3 .tile {
+  max-width: 1000px;
+  margin-bottom: 100px;
+  padding: 0 0 0 72px;
+}
+.section-3 .tile:last-child {
+  margin-bottom: 0px;
+}
+.section-3 .tile-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.section-3 .tile-header .left-wrap {
+  display: flex;
+  margin-right: 16px;
+}
+.section-3 .tile-header .left-wrap .logo-wrap {
+  align-self: flex-start;
+  flex-shrink: 0;
+  width: 36px;
+  margin-right: 16px;
+}
+.section-3 .tile-header .left-wrap .logo-wrap img {
+  border-radius: 50%;
+}
+.section-3 .tile-header .left-wrap .company-name {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.section-3 .tile-header .left-wrap .designation {
+  font-size: 18px;
+  color: #4caf50;
+  font-weight: 600;
+}
+.section-3 .tile-header .right-wrap {
+  align-self: flex-end;
+  font-size: 18px;
+  color: #b3b3b3;
+}
+.section-3 .tile-content {
+  padding: 0 0 0 52px;
+}
+.section-3 .tile-content li {
+  position: relative;
+  padding-left: 32px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.section-3 .tile-content li:before {
+  position: absolute;
+  content: '';
+  left: -4px;
+  top: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #4caf50 #4caf50 transparent transparent;
+  transform: rotate(45deg);
+}
+.section-3 .aeroplane-track {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  height: 100%;
+  border-left: 4px dashed #333333;
+}
+.section-3 .aeroplane-track .icon-wrap {
+  position: sticky;
+  top: 200px;
+  transform: translateX(-54%);
+}
+
+@media screen and (max-width: 767px) {
+  .section-3 .tile {
+    position: relative;
+    z-index: 10;
+    padding: 0 0 0 20px;
+    margin-bottom: 28px;
+  }
+  .section-3 .tile-header {
+    flex-direction: column;
+  }
+  .section-3 .tile-header .left-wrap .logo-wrap {
+    width: 32px;
+  }
+  .section-3 .tile-header .right-wrap {
+    align-self: flex-start;
+    margin: 0 0 0 48px;
+    font-size: 15px;
+  }
+  .section-3 .tile-content {
+    padding: 0;
+  }
+  .section-3 .tile-content li {
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .section-3 .aeroplane-track {
+    left: 0px;
+    border-left-width: 3px;
+  }
+  .section-3 .aeroplane-track .icon-wrap svg {
+    width: 24px;
+  }
+  .section-3 .tile-header .left-wrap .company-name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .section-3 .tile-header .left-wrap .designation {
+    font-size: 15px;
+  }
+}
+/* Section 3 */
+
+/* Section 4 */
+
+.section-4 {
+  padding: 60px 0;
+}
+.section-4 .card-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.section-4 .card-wrapper li {
+  flex: 1 1 100%;
+}
+.section-4 .card-wrapper .card {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  box-shadow: 0 4px 6px 0 rgba(109, 245, 156, 0.2);
+}
+.section-4 .card-wrapper .card .logo-wrap {
+  flex-shrink: 0;
+  align-self: flex-start;
+  max-width: 40px;
+  margin-right: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.section-4 .card-wrapper .left-wrap {
+  display: flex;
+}
+.section-4 .card-wrapper .clg-name {
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.section-4 .card-wrapper .course {
+  margin-bottom: 4px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4caf50;
+  font-weight: 600;
+}
+.section-4 .card-wrapper .right-wrap {
+  margin-left: 16px;
+  font-size: 18px;
+  color: #b3b3b3;
+}
+
+@media screen and (max-width: 767px) {
+  .section-4 .card-wrapper .card .logo-wrap {
+    max-width: 32px;
+  }
+  .section-4 .card-wrapper .clg-name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .section-4 .card-wrapper .course {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .section-4 .card-wrapper .right-wrap {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+/* Section 4 */
+
+/* Section 5 */
+
+.section-5 {
+  padding: 60px 0;
+}
+.section-5 .card-wrapper > ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 44px;
+}
+.section-5 .card-wrapper > ul > li {
+  flex: 0 1 calc(33.33% - 16px);
+}
+.section-5 .card-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  box-shadow:
+    0px 6px 12px rgba(0, 0, 0, 0.4),
+    0px 0px 8px rgba(255, 255, 255, 0.05);
+}
+.section-5 .card-wrapper .card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 16px;
+}
+.section-5 .card-wrapper .card .card-content .card-title {
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.section-5 .card-wrapper .card .card-content .card-desc {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.section-5 .card-wrapper .card .card-content .card-desc > ul {
+  padding-left: 16px;
+}
+.section-5 .card-wrapper .card .card-content .card-desc li {
+  list-style-type: disc;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #d3d3d3;
+}
+.section-5 .card-wrapper .card .card-content .card-desc li::marker {
+  color: #4caf50;
+}
+.section-5 .card-wrapper .card .card-content .card-desc li:last-child {
+  margin-bottom: 0px;
+}
+.section-5 .card-wrapper .card .card-content .techstack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.section-5 .card-wrapper .card .card-content .techstack .text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.section-5 .card-wrapper .card .card-content .techstack .skill {
+  padding: 2px 16px;
+  background-color: #333333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+.section-5 .card-wrapper .card .card-content .techstack .skill:active {
+  transform: scale(0.96);
+}
+.section-5 .card-wrapper .card .card-content .action-wrapper {
+  display: flex;
+}
+.section-5 .card-wrapper .card .card-content .action-wrapper a:first-child {
+  margin-right: 16px;
+}
+.section-5 .card-wrapper .card .card-content .action-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .section-5 .card-wrapper > ul > li {
+    flex: 0 1 calc(50% - 12px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-5 .card-wrapper > ul {
+    row-gap: 24px;
+  }
+  .section-5 .card-wrapper > ul > li {
+    flex: 0 1 100%;
+  }
+  .section-5 .card-wrapper .card .card-content .card-title {
+    font-size: 18px;
+  }
+  .section-5 .card-wrapper .card .card-content .card-desc li {
+    font-size: 16px;
+  }
+  .section-5 .card-wrapper .card .card-content .techstack .text {
+    font-size: 14px;
+  }
+  .section-5 .card-wrapper .card .card-content .action-wrapper a {
+    max-width: 20px;
+  }
+  .section-5 .card-wrapper .card .card-content .techstack .skill {
+    padding: 4px 12px;
+  }
+}
+/* Section 3 */
+
+/* Footer */
+
+footer {
+  padding: 60px 0;
+  background-color: #121212;
+}
+footer .title {
+  margin-bottom: 24px;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 600;
+}
+footer .info-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .info-wrapper:last-child {
+  margin-bottom: 24px;
+}
+footer .info-wrapper .icon-wrap {
+  margin-right: 8px;
+  max-width: 20px;
+}
+footer .info-wrapper .icon-wrap svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+footer .credit {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .credit .highlight {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    padding: 60px 0 44px 0;
+  }
+  footer .title {
+    font-size: 22px;
+  }
+  footer .info-wrapper {
+    font-size: 16px;
+  }
+  footer .credit {
+    font-size: 16px;
+  }
+  footer .credit .highlight {
+    font-size: 16px;
+  }
+}
+
+/* Footer */
+
+/* ===== Projects: переделанные карточки (обложка + кнопка репо + CTA) =====
+   добавлено отдельным блоком, чтобы не спорить со старыми правилами выше */
+
+.section-5 .card-wrapper .card .img-wrapper {
+  display: block;
+  text-decoration: none;
+}
+.section-5 .card-wrapper .card .project-cover {
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.section-5 .card-wrapper .card .project-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.section-5 .card-wrapper .card .cover-type {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.74);
+}
+.section-5 .card-wrapper .card .cover-mono {
+  position: relative;
+  z-index: 1;
+  font-size: 92px;
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.94;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+}
+.section-5 .card-wrapper .card .card-content .action-wrapper .repo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: 0;
+  max-width: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.section-5 .card-wrapper .card .card-content .action-wrapper .repo-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #4caf50;
+}
+.section-5 .card-wrapper .card .card-content .action-wrapper .repo-btn svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.section-5 .card-wrapper .card.cta-card {
+  background: linear-gradient(160deg, #18201b, #121712);
+  border: 1px solid rgba(76, 175, 80, 0.35);
+  box-shadow:
+    0px 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(76, 175, 80, 0.12);
+}
+.section-5 .card-wrapper .card.cta-card .cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  padding: 32px 24px;
+  color: inherit;
+  text-decoration: none;
+}
+.section-5 .card-wrapper .card.cta-card .cta-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.16);
+  color: #4caf50;
+}
+.section-5 .card-wrapper .card.cta-card .cta-inner .card-title {
+  margin-bottom: 8px;
+}
+.section-5 .card-wrapper .card.cta-card .cta-inner .text {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-bottom: 20px;
+}
+.section-5 .card-wrapper .card.cta-card .go {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4caf50;
+  font-size: 16px;
+  font-weight: 700;
+}
+.section-5 .card-wrapper .card.cta-card .go::after {
+  content: '\2192';
+  transition: transform 0.2s ease;
+}
+.section-5 .card-wrapper .card.cta-card:hover .go::after {
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 767px) {
+  .section-5 .card-wrapper .card .project-cover {
+    height: 150px;
+  }
+  .section-5 .card-wrapper .card .cover-mono {
+    font-size: 64px;
+  }
+}
+
+/* ============================================================
+   ANIMATIONS — scroll reveals, hero entrance, micro-interactions
+   всё гейтится классом .js: если JS не выполнился — сайт статичный
+   ============================================================ */
+:root {
+  --px-accent: #b4533a;
+  --px-accent-soft: rgba(180, 83, 58, 0.6);
+  --px-glow: rgba(180, 83, 58, 0.09);
+}
+body.darkmode {
+  --px-accent: #4caf50;
+  --px-accent-soft: rgba(76, 175, 80, 0.6);
+  --px-glow: rgba(76, 175, 80, 0.07);
+}
+
+/* ---------- полоса прогресса прокрутки ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--px-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 5000;
+  pointer-events: none;
+}
+
+/* ---------- reveal по скроллу ---------- */
+.js .anim-reveal {
+  opacity: 0;
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--rd, 0ms);
+  will-change: opacity, transform;
+}
+.js .anim-reveal.up    { transform: translateY(38px); }
+.js .anim-reveal.left  { transform: translateX(-46px); }
+.js .anim-reveal.is-in { opacity: 1; transform: none; filter: none; will-change: auto; }
+
+/* ---------- слова героя: маска сверху ---------- */
+.mask-line {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.mask-line > span {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: maskUp 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--md, 0ms);
+}
+@keyframes maskUp {
+  to { transform: translateY(0); }
+}
+
+/* ---------- появление на загрузке (только opacity/фильтр — безопасно для
+   элементов с готовыми transform-позициями, напр. иконки по кругу) ---------- */
+.js .fade-load {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: var(--md, 0ms);
+}
+/* полный light-up для элементов без своих transform */
+.js .fade-up-load {
+  opacity: 0;
+  animation: fadeUp 1.05s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--md, 0ms);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); filter: blur(4px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+
+/* ---------- параллакс-слои ---------- */
+.js [data-parallax] {
+  will-change: transform;
+}
+
+/* ---------- tilt фото в баннере ---------- */
+.js .banner .content-wrap .right-wrap .img-wrapper {
+  perspective: 900px;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* ---------- самолётик таймлайна: едет по скроллу, при скролле вверх переворачивается ---------- */
+.section-3 .aeroplane-track .icon-wrap {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 2;
+  transform: translateX(-54%);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+.section-3 .aeroplane-track .icon-wrap svg {
+  transform: scaleY(-1); /* по умолчанию нос вниз; JS переключает по направлению скролла */
+}
+
+/* ---------- микро-хэверы ---------- */
+.download-btn svg {
+  transition: transform 0.25s ease;
+}
+.download-btn:hover svg {
+  transform: translateY(3px);
+}
+.section-5 .card-wrapper .card {
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--rd, 0ms), var(--rd, 0ms), var(--rd, 0ms), 0s;
+}
+.section-5 .card-wrapper .card .cover-mono {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-5 .card-wrapper .card:hover .cover-mono {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+/* ---------- мягкое свечение за курсором ---------- */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 520px;
+  height: 520px;
+  margin: -260px 0 0 -260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--px-glow), transparent 65%);
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: transform;
+}
+html.js.has-cursor .cursor-glow {
+  opacity: 1;
+}
+
+/* ---------- accessibility / reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+  .js .anim-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .mask-line > span {
+    animation: none;
+    transform: none;
+  }
+  .scroll-progress,
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* ============================================================
+   PREMIUM ПАКЕТ: бегущая строка, шиммеры, блики, ripple, float
+   ============================================================ */
+:root {
+  --px-shine2: #d98c52;
+  --px-mask: rgba(125, 97, 74, 0.16);
+}
+body.darkmode {
+  --px-shine2: #8fd7a3;
+  --px-mask: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- бегущая строка со стеком ---------- */
+.px-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 13px 0;
+  border-top: 1px solid var(--px-mask);
+  border-bottom: 1px solid var(--px-mask);
+  background: linear-gradient(90deg, var(--px-glow), rgba(0, 0, 0, 0) 50%, var(--px-glow));
+  user-select: none;
+}
+.px-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: pxMarquee 46s linear infinite;
+  will-change: transform;
+}
+.px-marquee:hover .px-marquee-track {
+  animation-play-state: paused;
+}
+.px-marquee-group {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.px-marquee-group li {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--px-accent);
+  opacity: 0.92;
+}
+.px-marquee-group li::after {
+  content: '✦';
+  font-size: 11px;
+  opacity: 0.5;
+}
+@keyframes pxMarquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- шиммер подзаголовка в баннере (градиентный текст) ---------- */
+.js .banner .sub-title {
+  color: transparent;
+  background: linear-gradient(
+    100deg,
+    var(--px-accent) 0%,
+    var(--px-shine2) 30%,
+    var(--px-accent) 60%,
+    var(--px-accent-soft) 100%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.js .banner:hover .sub-title {
+  animation: pxShimmer 9s linear infinite;
+}
+@keyframes pxShimmer {
+  to {
+    background-position: -240% 0;
+  }
+}
+
+/* ---------- блик по заголовкам секций при появлении ---------- */
+.section-header .section-title {
+  position: relative;
+}
+.js .section-title.is-in::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.65) 50%, transparent 75%);
+  background-size: 240% 100%;
+  background-position: 130% 0;
+  animation: pxTitleShine 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  pointer-events: none;
+}
+body.darkmode .section-title.is-in::after {
+  background-image: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.18) 50%, transparent 75%);
+}
+@keyframes pxTitleShine {
+  to {
+    background-position: -130% 0;
+  }
+}
+
+/* ---------- блик на обложках карточек проектов ---------- */
+.section-5 .card-wrapper .card .project-cover {
+  position: relative;
+  overflow: hidden;
+}
+.section-5 .card-wrapper .card .project-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.34) 50%, transparent 62%);
+  background-size: 260% 100%;
+  background-position: 150% 0;
+  transition: background-position 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.section-5 .card-wrapper .card:hover .project-cover::after {
+  background-position: -150% 0;
+}
+
+/* ---------- блик на кнопках скачивания ---------- */
+.download-btn {
+  position: relative;
+  overflow: hidden;
+}
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  left: -70%;
+  width: 42%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: translateX(-160%) skewX(-20deg);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.download-btn:hover::before {
+  transform: translateX(520%) skewX(-20deg);
+}
+
+/* ---------- всплытие скиллов при ховере (без задержки от reveal) ---------- */
+.section-2 .skill {
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0s, 0s, var(--rd, 0ms), var(--rd, 0ms);
+}
+.section-2 .anim-reveal.is-in:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 14px 30px var(--px-glow);
+}
+
+/* ---------- парение аватарки ---------- */
+.js .banner .img-wrapper img {
+  animation: pxFloat 7.5s ease-in-out infinite;
+}
+@keyframes pxFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* ---------- ripple-волна по клику ---------- */
+.px-ripple {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: var(--px-accent);
+  opacity: 0.45;
+  transform: scale(0);
+  pointer-events: none;
+  z-index: 6;
+  animation: pxRipple 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes pxRipple {
+  to {
+    transform: scale(26);
+    opacity: 0;
+  }
+}

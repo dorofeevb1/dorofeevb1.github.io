@@ -1,0 +1,2916 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- сайт из шаблона, переделал под себя. фавиконку и фото автора выпилил - они были кринжовые -->
+    <title>Bogdan Dorofeev | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Bogdan Dorofeev, a Frontend Developer specializing in Angular and TypeScript, showing skills, professional experience, and projects in web development."
+    />
+    <meta name="author" content="Bogdan Dorofeev" />
+    <meta
+      name="keywords"
+      content="Bogdan Dorofeev, Frontend Developer, Software Engineer, Web Developer, JavaScript Developer, Angular Developer, TypeScript, NgRx, RxJS, WebSocket, Docker, Nginx, CI/CD, GitLab CI, GitHub Actions, HTML, CSS, TailwindCSS, REST API, ERP, Healthcare, Medical Information Systems, Portfolio, Resume, Technical Skills, Frontend Engineer, Micro-Frontend, Module Federation"
+    />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/home-critical.css" />
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  </head>
+
+  <body class="darkmode">
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <main class="main">
+      <div class="main-inner-wrap">
+        <section class="header">
+          <div class="container">
+            <nav>
+              <div class="wrapper">
+                <div class="left-wrap">Bogdan Dorofeev</div>
+
+                <ul class="horizontal-list">
+                  <li><a href="#skills" data-i18n="nav_skills"> Skills </a></li>
+                  <li><a href="#experience" data-i18n="nav_experience">Experience </a></li>
+                  <li><a href="#achievements" data-i18n="nav_achievements">Achievements </a></li>
+                  <li><a href="#projects" data-i18n="nav_projects">Projects </a></li>
+
+                  <li class="lang-item">
+                    <button id="langToggle" class="lang-btn" type="button" aria-label="Switch language">RU</button>
+                  </li>
+                  <li class="lang-item">
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to light theme">
+                      <svg
+                        class="icon-sun"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="4.5" />
+                        <path
+                          d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-moon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="menu">
+                  <svg
+                    class="open-menu"
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.11111 0.666992C0.497467 0.666992 0 1.30659 0 2.09556C0 2.88454 0.497467 3.52414 1.11111 3.52414H18.8889C19.5026 3.52414 20 2.88454 20 2.09556C20 1.30659 19.5026 0.666992 18.8889 0.666992H1.11111ZM4.44444 10.667C4.44444 9.87799 4.94191 9.23842 5.55556 9.23842H18.8889C19.5026 9.23842 20 9.87799 20 10.667C20 11.456 19.5026 12.0956 18.8889 12.0956H5.55556C4.94191 12.0956 4.44444 11.456 4.44444 10.667ZM11.1111 19.2384C11.1111 18.4494 11.6086 17.8098 12.2222 17.8098H18.8889C19.5026 17.8098 20 18.4494 20 19.2384C20 20.0274 19.5026 20.667 18.8889 20.667H12.2222C11.6086 20.667 11.1111 20.0274 11.1111 19.2384Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    class="close-menu"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.9654 10.3531L19.2639 18.6795L18.6481 19.293L10.3541 10.9712L9.99991 10.6159L9.64577 10.9712L1.35169 19.293L0.73597 18.6795L9.03442 10.3531L9.38621 10.0002L9.03442 9.6472L0.735894 1.32103L1.35177 0.707132L9.64576 9.02904L9.99991 9.38438L10.3541 9.02904L18.6481 0.707132L19.2639 1.32103L10.9654 9.6472L10.6136 10.0002L10.9654 10.3531Z"
+                      fill="black"
+                      stroke="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </section>
+
+        <section class="banner">
+          <div class="container">
+            <div class="content-wrap">
+              <div class="left-wrap">
+                <h1 class="title" data-i18n="banner_title">Hi, I'm Bogdan Dorofeev,</h1>
+                <h2 class="sub-title" data-i18n="banner_subtitle">Frontend Developer</h2>
+                <div class="desc" data-i18n="banner_desc">
+                  Frontend developer with 5 years of commercial experience in JavaScript. Specializing in Angular +
+                  TypeScript on large-scale product projects (healthcare, ERP, analytics). Writing unit and automation
+                  tests with pytest and Selenium, configuring CI/CD (GitLab CI, GitHub Actions) and nginx. Experienced
+                  with a modular, micro-frontend-like architecture - building independent modules with their own state
+                  (NgRx) and integrating them into a single application. Focused on quality, testability, and
+                  predictable releases.
+                </div>
+                <!-- кнопки скачивания. поменял резюме в files/ - не забудь обновить -->
+                <div class="download-btns">
+                  <a class="download-btn" href="./files/resume.pdf" download aria-label="Download Resume PDF">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 16L7 11L8.4 9.6L11 12.2V4H13V12.2L15.6 9.6L17 11L12 16ZM5 20C4.45 20 3.97917 19.8042 3.5875 19.4125C3.19583 19.0208 3 18.55 3 18V15H5V18H19V15H21V18C21 18.55 20.8042 19.0208 20.4125 19.4125C20.0208 19.8042 19.55 20 19 20H5Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span data-i18n="dl_pdf">Download Resume (PDF)</span>
+                  </a>
+                  <a
+                    class="download-btn secondary"
+                    href="./files/resume.docx"
+                    download
+                    aria-label="Download Resume DOC"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 16L7 11L8.4 9.6L11 12.2V4H13V12.2L15.6 9.6L17 11L12 16ZM5 20C4.45 20 3.97917 19.8042 3.5875 19.4125C3.19583 19.0208 3 18.55 3 18V15H5V18H19V15H21V18C21 18.55 20.8042 19.0208 20.4125 19.4125C20.0208 19.8042 19.55 20 19 20H5Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span data-i18n="dl_doc">DOC</span>
+                  </a>
+                </div>
+              </div>
+              <div class="right-wrap">
+                <div class="img-wrapper">
+                  <!-- замени src на другую фотку, если захочешь -->
+                  <img src="img/ChatGPT Image 18 сент. 2026 г., 19_28_26.png" />
+                </div>
+                <div class="social-icon-wrapper">
+                  <!-- иконки по кругу: 5 штук, шаг 72 градуса. долго подбирал радиус, чтобы не наезжали на монограмму и не разъезжались -->
+                  <ul>
+                    <li>
+                      <a href="https://github.com/dorofeevb1" target="_blank" aria-label="Github Profile">
+                        <img src="./icons/github.svg" alt="Github" width="28" height="28" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://gitlab.com/dorofeevb1" target="_blank" aria-label="GitLab Profile">
+                        <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="24" height="24" rx="12" fill="#171321" />
+                          <path
+                            fill="#FC6D26"
+                            d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://t.me/Dorof_hanzo" target="_blank" aria-label="Telegram Profile">
+                        <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="24" height="24" rx="12" fill="#229ED9" />
+                          <path
+                            fill="#FFFFFF"
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:dorofeevb1@gmail.com" target="_blank" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="28" height="28">
+                          <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z" />
+                          <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z" />
+                          <polygon
+                            fill="#e53935"
+                            points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"
+                          />
+                          <path
+                            fill="#c62828"
+                            d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"
+                          />
+                          <path
+                            fill="#fbc02d"
+                            d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://leetcode.com/u/JnJePk6AHT/" target="_blank" aria-label="LeetCode Profile">
+                        <img src="./icons/leetcode.svg" alt="LeetCode" width="28" height="28" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- бегущая строка со стеком: контент продублирован ради бесшовного цикла -->
+        <div class="px-marquee" aria-label="Tech stack">
+          <div class="px-marquee-track">
+            <ul class="px-marquee-group">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>NgRx</li>
+              <li>RxJS</li>
+              <li>React</li>
+              <li>Vue3</li>
+              <li>Jest</li>
+              <li>Cypress</li>
+              <li>Docker</li>
+              <li>Nginx</li>
+              <li>CI/CD</li>
+              <li>WebSocket</li>
+              <li>REST API</li>
+            </ul>
+            <ul class="px-marquee-group" aria-hidden="true">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>NgRx</li>
+              <li>RxJS</li>
+              <li>React</li>
+              <li>Vue3</li>
+              <li>Jest</li>
+              <li>Cypress</li>
+              <li>Docker</li>
+              <li>Nginx</li>
+              <li>CI/CD</li>
+              <li>WebSocket</li>
+              <li>REST API</li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="section-2" id="skills">
+          <!-- навыки руками добавлял, при обновлении не забыть и сюда -->
+          <div class="container">
+            <div class="section-header">
+              <div class="icon-wrap">
+                <img src="./icons/skills.svg" alt="Skill" loading="lazy" width="32" height="32" />
+              </div>
+              <div class="section-title" data-i18n="sec_skills">Skills</div>
+            </div>
+
+            <div class="skills-wrapper">
+              <ul>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.58245 16.3128L-0.0883789 0.128906L17.9116 0.135083L16.2548 16.3005L8.89758 18.1289L1.58245 16.3128ZM14.8999 15.4295L16.297 1.56816H8.92566L8.98182 16.8564L14.8999 15.4295ZM8.23767 3.60042H6.4475L6.42644 11.8962L2.9514 11.0623L2.95842 12.9587L8.23767 14.2126V3.60042Z"
+                          fill="#D4B830"
+                        />
+                        <path
+                          opacity="0.986"
+                          d="M2.95844 12.9585L2.95142 11.0622C2.95142 11.0622 5.16983 11.6119 6.42646 11.8961L6.44752 3.60645H8.23769V14.2125L2.95844 12.9585Z"
+                          fill="#EBEBEB"
+                          fill-opacity="0.9216"
+                        />
+                        <path
+                          d="M8.92578 1.56201H16.2971L14.9 15.4234L8.92578 16.8503V1.56201ZM14.5209 13.1008L15.0053 7.91822L11.425 8.27032V5.50299L15.244 5.49063L15.3985 3.60045L9.63483 3.62515L9.71205 10.5064L13.1941 9.98137L13.145 11.5133L9.63483 12.3348L9.66993 14.2127L14.5209 13.1008Z"
+                          fill="#FDD83C"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title">JavaScript</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18 9.07725C18 7.73828 16.5067 6.46934 14.2173 5.68243C14.7456 3.06215 14.5108 0.977461 13.4762 0.310032C13.2377 0.153474 12.9588 0.0793152 12.6543 0.0793152V0.998061C12.8231 0.998061 12.9588 1.03514 13.0726 1.10518C13.5715 1.42653 13.788 2.65015 13.6192 4.22397C13.5789 4.61124 13.5128 5.01912 13.4321 5.43523C12.713 5.23747 11.9278 5.08504 11.1023 4.98616C10.607 4.22397 10.0934 3.53182 9.57603 2.92619C10.7721 1.67785 11.8948 0.993941 12.658 0.993941V0.0751953C11.649 0.0751953 10.3282 0.882703 8.99266 2.28348C7.65715 0.890943 6.33632 0.0916751 5.32735 0.0916751V1.01042C6.08683 1.01042 7.21321 1.69021 8.4093 2.93031C7.89564 3.53594 7.38198 4.22397 6.89401 4.98616C6.06482 5.08504 5.27966 5.23747 4.56054 5.43935C4.47615 5.02736 4.41378 4.62772 4.36975 4.24457C4.19731 2.67075 4.41011 1.44713 4.90542 1.12166C5.01549 1.0475 5.15858 1.01454 5.32735 1.01454V0.095795C5.01916 0.095795 4.74032 0.169954 4.49817 0.326511C3.46718 0.993941 3.23604 3.07451 3.76804 5.68655C1.48594 6.47758 0 7.7424 0 9.07725C0 10.4162 1.49327 11.6852 3.78271 12.4721C3.25438 15.0924 3.4892 17.177 4.52385 17.8445C4.76233 18.001 5.04117 18.0752 5.34937 18.0752C6.35834 18.0752 7.67917 17.2677 9.01468 15.8669C10.3502 17.2594 11.671 18.0587 12.68 18.0587C12.9882 18.0587 13.267 17.9846 13.5092 17.828C14.5402 17.1606 14.7713 15.08 14.2393 12.468C16.5141 11.6811 18 10.4121 18 9.07725ZM13.223 6.32926C13.0872 6.86073 12.9185 7.40868 12.7277 7.95663C12.5773 7.62704 12.4195 7.29744 12.247 6.96785C12.0783 6.63825 11.8985 6.3169 11.7187 6.00378C12.2397 6.0903 12.7424 6.19742 13.223 6.32926ZM11.5426 10.717C11.2564 11.2732 10.9629 11.8005 10.6584 12.2908C10.1117 12.3444 9.55769 12.3732 9 12.3732C8.44599 12.3732 7.89197 12.3444 7.34896 12.2949C7.04444 11.8047 6.74725 11.2814 6.46107 10.7293C6.18223 10.1896 5.92907 9.64169 5.69792 9.08961C5.9254 8.53754 6.18223 7.98547 6.4574 7.44576C6.74358 6.88957 7.0371 6.36222 7.34162 5.87194C7.8883 5.81839 8.44232 5.78955 9 5.78955C9.55402 5.78955 10.108 5.81839 10.651 5.86783C10.9556 6.3581 11.2528 6.88133 11.5389 7.4334C11.8178 7.97311 12.0709 8.52106 12.3021 9.07313C12.0709 9.62521 11.8178 10.1773 11.5426 10.717ZM12.7277 10.1814C12.9258 10.7335 13.0946 11.2855 13.234 11.8211C12.7534 11.953 12.247 12.0642 11.7224 12.1507C11.9022 11.8335 12.0819 11.508 12.2507 11.1743C12.4195 10.8447 12.5773 10.511 12.7277 10.1814ZM9.00734 14.5774C8.66612 14.1819 8.32491 13.741 7.98736 13.259C8.31757 13.2755 8.65512 13.2878 8.99633 13.2878C9.34122 13.2878 9.68243 13.2796 10.0163 13.259C9.6861 13.741 9.34488 14.1819 9.00734 14.5774ZM6.27762 12.1507C5.75662 12.0642 5.25397 11.9571 4.77334 11.8253C4.90909 11.2938 5.07786 10.7458 5.26865 10.1979C5.41908 10.5275 5.57684 10.8571 5.74929 11.1867C5.92173 11.5163 6.09784 11.8376 6.27762 12.1507ZM8.98899 3.57714C9.33021 3.97265 9.67142 4.41349 10.009 4.89552C9.67876 4.87904 9.34122 4.86668 9 4.86668C8.65512 4.86668 8.3139 4.87492 7.98003 4.89552C8.31023 4.41349 8.65145 3.97265 8.98899 3.57714ZM6.27395 6.00378C6.09417 6.32102 5.91439 6.64649 5.74562 6.98021C5.57684 7.3098 5.41908 7.6394 5.26865 7.96899C5.07053 7.41692 4.90175 6.86485 4.76233 6.32926C5.24297 6.20154 5.74929 6.0903 6.27395 6.00378ZM2.95353 11.1619C1.65471 10.5398 0.814513 9.72408 0.814513 9.07725C0.814513 8.43042 1.65471 7.61056 2.95353 6.99257C3.26906 6.84013 3.61394 6.70417 3.96983 6.57645C4.17896 7.38396 4.45414 8.22443 4.79535 9.0855C4.45781 9.94244 4.1863 10.7788 3.98084 11.5822C3.61761 11.4545 3.27273 11.3144 2.95353 11.1619ZM4.92744 17.0493C4.42846 16.728 4.21199 15.5044 4.38076 13.9305C4.42112 13.5433 4.48716 13.1354 4.56788 12.7193C5.287 12.917 6.07216 13.0695 6.89768 13.1684C7.39299 13.9305 7.90664 14.6227 8.42397 15.2283C7.22788 16.4767 6.10518 17.1606 5.34203 17.1606C5.17693 17.1564 5.03751 17.1194 4.92744 17.0493ZM13.6302 13.9099C13.8027 15.4838 13.5899 16.7074 13.0946 17.0329C12.9845 17.107 12.8414 17.14 12.6726 17.14C11.9132 17.14 10.7868 16.4602 9.59071 15.2201C10.1044 14.6144 10.618 13.9264 11.106 13.1642C11.9352 13.0654 12.7203 12.9129 13.4395 12.711C13.5238 13.1272 13.5899 13.5268 13.6302 13.9099ZM15.0428 11.1619C14.7273 11.3144 14.3824 11.4503 14.0265 11.5781C13.8174 10.7705 13.5422 9.93008 13.201 9.06901C13.5385 8.21207 13.81 7.37572 14.0155 6.57233C14.3787 6.70005 14.7236 6.84013 15.0465 6.99257C16.3453 7.61468 17.1855 8.43042 17.1855 9.07725C17.1818 9.72408 16.3416 10.544 15.0428 11.1619Z"
+                          fill="#61DAFB"
+                        />
+                        <path
+                          d="M8.9963 10.9601C9.92233 10.9601 10.673 10.1171 10.673 9.07727C10.673 8.03742 9.92233 7.19446 8.9963 7.19446C8.07027 7.19446 7.31958 8.03742 7.31958 9.07727C7.31958 10.1171 8.07027 10.9601 8.9963 10.9601Z"
+                          fill="#61DAFB"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title">React</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 0.6875H18L9 18.6875L0 0.6875H3.555H6.885L9 4.86141L11.07 0.6875H14.4Z"
+                          fill="#41B883"
+                        />
+                        <path d="M0 0.6875L9 18.6875L18 0.6875H14.4L9 11.4875L3.555 0.6875H0Z" fill="#41B883" />
+                        <path
+                          d="M3.55499 0.6875L8.99999 11.5397L14.4 0.6875H11.07L8.99999 4.86141L6.88499 0.6875H3.55499Z"
+                          fill="#35495E"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title">Vue3</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.67697 16.0136L1.27002 0.233398H16.7298L15.3213 16.0112L8.99047 17.7662L2.67697 16.0136Z"
+                          fill="#E44D26"
+                        />
+                        <path d="M9 16.4246L14.1157 15.0063L15.3193 1.52344H9V16.4246Z" fill="#F16529" />
+                        <path
+                          d="M9.00008 7.37623H6.43902L6.26211 5.39427H9.00008V3.45898H4.14697L4.19338 3.97817L4.66897 9.31166H9.00008V7.37623ZM9.00008 12.4026L8.9915 12.405L6.83614 11.8228L6.69847 10.2794H4.75546L5.02658 13.3182L8.99122 14.4187L9.00008 14.4163V12.4026Z"
+                          fill="#EBEBEB"
+                        />
+                        <path
+                          d="M8.99316 7.37623V9.31166H11.3763L11.1518 11.8217L8.99316 12.4043V14.4179L12.9609 13.3182L12.99 12.9913L13.4448 7.89598L13.4919 7.37623H12.9705H8.99316ZM8.99316 3.45898V5.39427H13.6681L13.7069 4.95945L13.7952 3.97817L13.8415 3.45898H8.99316Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title">HTML5</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15.9403 0L14.4944 16.1981L7.99488 18L1.51325 16.2007L0.0688477 0H15.9403Z"
+                          fill="#264DE4"
+                        />
+                        <path d="M8.00439 16.6223L13.2563 15.1663L14.492 1.32422H8.00439V16.6223Z" fill="#2965F1" />
+                        <path d="M8.00437 7.33301H3.37988L3.55797 9.31993H8.00437V7.33301Z" fill="#EBEBEB" />
+                        <path d="M8.00478 3.31152H7.99791H3.02246L3.20308 5.29849H8.00478V3.31152Z" fill="#EBEBEB" />
+                        <path
+                          d="M3.64697 10.3135L3.92534 13.4333L7.99545 14.5632L8.0046 14.5606V12.4934L7.99589 12.4957L5.78301 11.8982L5.64155 10.3135H4.56627H3.64697Z"
+                          fill="#EBEBEB"
+                        />
+                        <path
+                          d="M10.4443 9.32007L10.2136 11.897L7.99756 12.4951V14.5623L12.0709 13.4334L12.1008 13.0977L12.5677 7.8667L12.6162 7.33315L12.9749 3.31152H7.99756V5.29849H10.7974L10.6166 7.33315H7.99756V9.32007H10.4443Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title">CSS3</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 0C6.60002 0 5.09998 1.55559 4.5 4.66667C5.4 3.11108 6.44998 2.52775 7.65 2.91667C8.33463 3.13852 8.82401 3.78246 9.3657 4.49513C10.2481 5.65624 11.2693 7 13.5 7C15.9 7 17.4 5.44441 18 2.33333C17.1 3.88892 16.05 4.47225 14.85 4.08333C14.1654 3.86148 13.676 3.21754 13.1343 2.50487C12.2519 1.34376 11.2307 0 9 0ZM4.5 7C2.10002 7 0.599977 8.55559 0 11.6667C0.9 10.1111 1.94998 9.52775 3.15 9.91667C3.83463 10.1385 4.32401 10.7825 4.8657 11.4951C5.74812 12.6562 6.76934 14 9 14C11.4 14 12.9 12.4444 13.5 9.33333C12.6 10.8889 11.55 11.4723 10.35 11.0833C9.66537 10.8615 9.17599 10.2175 8.6343 9.50487C7.75188 8.34376 6.73066 7 4.5 7Z"
+                          fill="url(#paint0_linear_10_104)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_10_104"
+                            x1="-128.01"
+                            y1="688.128"
+                            x2="-38.9234"
+                            y2="1459.3"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#2298BD" />
+                            <stop offset="1" stop-color="#0ED7B5" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="title">Tailwind CSS</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#DD0031" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          ng
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">Angular</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#3178C6" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          TS
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">TypeScript</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#B7178C" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          Rx
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">RxJS</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#B52E31" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          Ng
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">NgRx</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#C21325" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          J
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">Jest</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#0F766E" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          Cy
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">Cypress</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#4CAF50" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          API
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">REST API</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#00BCD4" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          WS
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">WebSocket</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#2496ED" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          D
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">Docker</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#009639" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          N
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">Nginx</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#F97316" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          CI
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">CI/CD</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill">
+                    <div class="icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="18" rx="4" fill="#F1502F" />
+                        <text
+                          x="9"
+                          y="12.5"
+                          font-size="10"
+                          font-weight="700"
+                          text-anchor="middle"
+                          fill="#FFFFFF"
+                          font-family="Montserrat, sans-serif"
+                        >
+                          Git
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="title">Git</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-3" id="experience">
+          <!-- опыт. логотипы компаний - простые кружки с инициалами, реальных картинок
+             не завезли, так и оставил -->
+          <div class="container">
+            <div class="section-header">
+              <div class="icon-wrap">
+                <img src="./icons/experience.svg" alt="Experience" loading="lazy" width="32" height="32" />
+              </div>
+              <div class="section-title" data-i18n="sec_experience">Experience</div>
+            </div>
+
+            <div class="tile-wrapper">
+              <div class="aeroplane-track">
+                <div class="icon-wrap">
+                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_30_128)">
+                      <path
+                        d="M14.2209 1.95588L0.49168 30.1004C0.359891 30.3709 0.299082 30.6704 0.314977 30.9709C0.330872 31.2713 0.422948 31.5628 0.582539 31.8178C0.742129 32.0729 0.963985 32.2831 1.22724 32.4287C1.49048 32.5744 1.78644 32.6506 2.08729 32.6504H2.1382C2.37603 32.6502 2.61295 32.6208 2.84364 32.5631L13.642 29.8633C13.7859 29.8271 13.9152 29.7477 14.0127 29.636C14.1102 29.5241 14.1712 29.3852 14.1875 29.2377L15.5067 17.3722C15.5305 17.1748 15.6257 16.9929 15.7745 16.8609C15.9232 16.729 16.1151 16.6561 16.314 16.6561C16.5128 16.6561 16.7047 16.729 16.8535 16.8609C17.0023 16.9929 17.0975 17.1748 17.1212 17.3722L18.4405 29.2377C18.4568 29.3852 18.5178 29.5241 18.6152 29.636C18.7127 29.7477 18.8421 29.8271 18.9859 29.8633L29.7828 32.5631C30.0135 32.6208 30.2505 32.6502 30.4882 32.6504H30.5392C30.8399 32.6504 31.1357 32.574 31.3987 32.4282C31.6618 32.2825 31.8834 32.0722 32.0429 31.8172C32.2023 31.5621 32.2942 31.2708 32.3101 30.9705C32.3259 30.6701 32.265 30.3707 32.1334 30.1004L18.4041 1.95733C18.213 1.56539 17.9155 1.23506 17.5457 1.00398C17.1759 0.77291 16.7486 0.650391 16.3125 0.650391C15.8765 0.650391 15.4492 0.77291 15.0794 1.00398C14.7096 1.23506 14.4121 1.56394 14.2209 1.95588Z"
+                        fill="#4CAF50"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_30_128">
+                        <rect width="33" height="33" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-header">
+                  <div class="left-wrap">
+                    <div class="logo-wrap">
+                      <!-- <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                          background: #4caf50;
+                          color: #fff;
+                          font-weight: 700;
+                          font-size: 13px;
+                        "
+                        >ОТ</span
+                      > -->
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                        "
+                      >
+                        <img src="img/as.png" alt="" />
+                      </span>
+                    </div>
+                    <div class="company-spec">
+                      <div class="company-name">Oblteh</div>
+                      <div class="designation" data-i18n="e1_desig">Frontend Developer (Angular)</div>
+                    </div>
+                  </div>
+                  <div class="right-wrap">September 2025 - March 2026</div>
+                </div>
+                <div class="tile-content">
+                  <ul>
+                    <li data-i18n="e1_0">
+                      Project: a suite of medical information systems for patient management, nurse shift scheduling,
+                      and surgery records.
+                    </li>
+                    <li data-i18n="e1_1">Fully rewrote the key product modules from React to Angular.</li>
+                    <li data-i18n="e1_2">
+                      Built interfaces for nurse shift management, patient intake, staff scheduling, and surgery
+                      records.
+                    </li>
+                    <li data-i18n="e1_3">Implemented application state management with NgRx.</li>
+                    <li data-i18n="e1_4">
+                      Developed real-time synchronization of shifts and statuses across workstations via WebSocket.
+                    </li>
+                    <li data-i18n="e1_5">Created responsive interfaces for tablets and desktop workstations.</li>
+                    <li data-i18n="e1_6">
+                      Collaborated with system analysts and QA on requirements refinement, testing, and release
+                      stabilization.
+                    </li>
+                    <li data-i18n="e1_7">
+                      Technologies: Angular, TypeScript, RxJS, NgRx, Angular Material, PrimeNG, Tailwind CSS, WebSocket,
+                      REST API, Git.
+                    </li>
+                    <li data-i18n="e1_8">
+                      Key achievements: unified the frontend stack by migrating key modules from React to Angular;
+                      enabled real-time data sync for medical staff; delivered interfaces adapted for tablet and desktop
+                      clinic workflows; improved release predictability through early requirements work and joint QA
+                      problem-solving.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-header">
+                  <div class="left-wrap">
+                    <div class="logo-wrap">
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                        "
+                      >
+                        <img src="img/prp.png" alt="" />
+                      </span>
+                    </div>
+                    <div class="company-spec">
+                      <div class="company-name">Plastik Rusi Plant</div>
+                      <div class="designation" data-i18n="e2_desig">Frontend Developer / System Analyst</div>
+                    </div>
+                  </div>
+                  <div class="right-wrap">March 2025 - September 2025</div>
+                </div>
+                <div class="tile-content">
+                  <ul>
+                    <li data-i18n="e2_0">
+                      Project: a corporate ERP and CRM system automating the plant's production processes.
+                    </li>
+                    <li data-i18n="e2_1">Built a modular ERP system from scratch on Angular 16.</li>
+                    <li data-i18n="e2_2">Analyzed production processes and formalized system requirements.</li>
+                    <li data-i18n="e2_3">
+                      Developed business logic for order management and product readiness time calculation.
+                    </li>
+                    <li data-i18n="e2_4">
+                      Implemented real-time equipment monitoring and operator task management via WebSocket.
+                    </li>
+                    <li data-i18n="e2_5">Created a Kanban system and an internal corporate messenger.</li>
+                    <li data-i18n="e2_6">Set up CI/CD with automated testing and Docker deployment.</li>
+                    <li data-i18n="e2_7">
+                      Adopted ESLint, commitlint, and Husky for code quality control and unified development rules.
+                    </li>
+                    <li data-i18n="e2_8">Prepared technical specifications for the development team.</li>
+                    <li data-i18n="e2_9">
+                      Technologies: Angular 16, TypeScript, RxJS, WebSocket, REST API, Docker, GitLab CI/CD, ESLint,
+                      commitlint, Husky, Linux, Nginx, Git.
+                    </li>
+                    <li data-i18n="e2_10">
+                      Key achievements: delivered the full ERP lifecycle - from production process analysis and TZ
+                      preparation to system rollout; automated order tracking and product readiness estimation; enabled
+                      live equipment and task statuses via WebSocket; improved release reliability with CI/CD and
+                      containerized deployment; established baseline quality standards in the project.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-header">
+                  <div class="left-wrap">
+                    <div class="logo-wrap">
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                        "
+                      >
+                        <img src="img/vot.png" alt="" />
+                      </span>
+                    </div>
+                    <div class="company-spec">
+                      <div class="company-name">VOTCHIT.RU</div>
+                      <div class="designation" data-i18n="e3_desig">Frontend Engineer</div>
+                    </div>
+                  </div>
+                  <div class="right-wrap">April 2024 - June 2024</div>
+                </div>
+                <div class="tile-content">
+                  <ul>
+                    <li data-i18n="e3_0">
+                      Project: an analytics system with dashboards and visualization of large data volumes.
+                    </li>
+                    <li data-i18n="e3_1">Designed and extended interfaces of the analytics system.</li>
+                    <li data-i18n="e3_2">Built components and user flows for working with dashboards.</li>
+                    <li data-i18n="e3_3">Improved UX for viewing and processing large data volumes.</li>
+                    <li data-i18n="e3_4">Optimized the rendering of tables, widgets, and analytics screens.</li>
+                    <li data-i18n="e3_5">Maintained the existing frontend jQuery codebase.</li>
+                    <li data-i18n="e3_6">Technologies: JavaScript, jQuery, HTML5, CSS3, REST API, Git.</li>
+                    <li data-i18n="e3_7">
+                      Key achievements: improved user flows for high-load analytics dashboards; boosted navigation and
+                      data readability; quickly onboarded into product support and extended the legacy jQuery code.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-header">
+                  <div class="left-wrap">
+                    <div class="logo-wrap">
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                          background: #8b5cf6;
+                          color: #fff;
+                          font-weight: 700;
+                          font-size: 13px;
+                        "
+                        >Ф</span
+                      >
+                    </div>
+                    <div class="company-spec">
+                      <div class="company-name">Freelance / Custom Software Studio</div>
+                      <div class="designation" data-i18n="e4_desig">Software Engineer / Frontend Developer</div>
+                    </div>
+                  </div>
+                  <div class="right-wrap">June 2022 - April 2024</div>
+                </div>
+                <div class="tile-content">
+                  <ul>
+                    <li data-i18n="e4_0">
+                      Project: web applications, Telegram bots, and automation and data parsing tools for client
+                      projects.
+                    </li>
+                    <li data-i18n="e4_1">Built client web applications with Angular.</li>
+                    <li data-i18n="e4_2">Integrated frontend with REST APIs.</li>
+                    <li data-i18n="e4_3">Wrote Python scripts for routine automation and data parsing.</li>
+                    <li data-i18n="e4_4">Developed Telegram bots with custom business logic.</li>
+                    <li data-i18n="e4_5">Configured Docker environments, CI/CD processes, and client deployments.</li>
+                    <li data-i18n="e4_6">Provided technical support, fixed bugs, and extended existing projects.</li>
+                    <li data-i18n="e4_7">Delivered a data collection system for Russian Railways (RZD).</li>
+                    <li data-i18n="e4_8">
+                      Technologies: Angular 14+, React, Vue3, TypeScript, JavaScript, HTML5, CSS3, Python, Django,
+                      FastAPI, Aiogram, Telethon, REST API, Docker, GitHub Actions, GitLab CI/CD, Linux, Git.
+                    </li>
+                    <li data-i18n="e4_9">
+                      Key achievements: delivered end-to-end client solutions - from requirements to deployment and
+                      technical support; automated data collection and processing with Python scripts and parsers; built
+                      Telegram bots with integrations and applied business logic; shortened project deployment time
+                      through containerization and CI/CD.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-header">
+                  <div class="left-wrap">
+                    <div class="logo-wrap">
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                          background: #3b82f6;
+                          color: #fff;
+                          font-weight: 700;
+                          font-size: 13px;
+                        "
+                        >М</span
+                      >
+                    </div>
+                    <div class="company-spec">
+                      <div class="company-name">meotyda</div>
+                      <div class="designation" data-i18n="e4_desig">Software Engineer / Frontend Developer</div>
+                    </div>
+                  </div>
+                  <div class="right-wrap">May 2020 - June 2021</div>
+                </div>
+                <div class="tile-content">
+                  <ul>
+                    <li data-i18n="e5_0">
+                      Project: an analytics platform, desktop QR-code generator, and a Raspberry Pi IoT accounting
+                      system.
+                    </li>
+                    <li data-i18n="e5_1">Developed an analytics interface in Angular with RxJS.</li>
+                    <li data-i18n="e5_2">Built a desktop QR-code generator with Python and PyQt5.</li>
+                    <li data-i18n="e5_3">Designed the PostgreSQL database schema.</li>
+                    <li data-i18n="e5_4">Set up Docker infrastructure for local and server deployments.</li>
+                    <li data-i18n="e5_5">Developed an IoT system on Raspberry Pi.</li>
+                    <li data-i18n="e5_6">Integrated scanners and hardware with the system backend.</li>
+                    <li data-i18n="e5_7">Contributed to the architecture and business logic design.</li>
+                    <li data-i18n="e5_8">
+                      Technologies: Angular, TypeScript, JavaScript, RxJS, Python, PyQt5, PostgreSQL, Docker, Raspberry
+                      Pi, IoT, REST API, Linux, Git.
+                    </li>
+                    <li data-i18n="e5_9">
+                      Key achievements: built a reactive analytics frontend; created a desktop app automating QR-code
+                      generation; designed a Raspberry Pi IoT solution with scanner integration; prepared the PostgreSQL
+                      schema and Docker infrastructure for reproducible deployments.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-4" id="achievements">
+          <!-- достижения, которыми норм хвастаться. если где-то надо - подправь цифры на свои -->
+          <div class="container">
+            <div class="section-header">
+              <div class="icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="#4CAF50"
+                    d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7
+                  31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12
+                  c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.7c40.3-4.6 78.6-19 110-41.7C553.5 216.4 576 179.7 576 144V88c0-13.3-10.7-24-24-24z
+                  M48 144V112h40.2c.2 15-2.8 29.9-8.4 44.7C56.6 143.6 48.8 143.3 48 144zm480 0c-.8.3-8.6.6-31.8 12.7-5.6-14.8-8.6-29.7-8.4-44.7H528v32z"
+                  />
+                </svg>
+              </div>
+              <div class="section-title" data-i18n="sec_achievements">Achievements</div>
+            </div>
+            <div class="card-wrapper">
+              <ul>
+                <li>
+                  <div class="card">
+                    <div class="left-wrap">
+                      <div class="logo-wrap">
+                        <span
+                          style="
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: #4caf50;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 15px;
+                          "
+                          >01</span
+                        >
+                      </div>
+                      <div class="univ-wrap">
+                        <div class="clg-name" data-i18n="ach1_t">Independent modules in one app</div>
+                        <div class="course" data-i18n="ach1_d">
+                          Modular architecture in the spirit of micro-frontends: every module carries its own NgRx state
+                          and everything assembles into a single product.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-wrap" data-i18n="ach1_r">Architecture</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="left-wrap">
+                      <div class="logo-wrap">
+                        <span
+                          style="
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: #f97316;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 15px;
+                          "
+                          >02</span
+                        >
+                      </div>
+                      <div class="univ-wrap">
+                        <div class="clg-name" data-i18n="ach2_t">Releases stopped slipping</div>
+                        <div class="course" data-i18n="ach2_d">
+                          Set up CI/CD (GitLab CI, GitHub Actions), Docker and nginx - deploys became predictable, only
+                          verified code reaches production.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-wrap" data-i18n="ach2_r">Delivery</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="left-wrap">
+                      <div class="logo-wrap">
+                        <span
+                          style="
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: #06b6d4;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 15px;
+                          "
+                          >03</span
+                        >
+                      </div>
+                      <div class="univ-wrap">
+                        <div class="clg-name" data-i18n="ach3_t">Tests that actually catch bugs</div>
+                        <div class="course" data-i18n="ach3_d">
+                          Unit and E2E suites (Jest, Cypress, pytest + Selenium): regressions stopped leaking into prod.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-wrap" data-i18n="ach3_r">Quality</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="left-wrap">
+                      <div class="logo-wrap">
+                        <span
+                          style="
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: #8b5cf6;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 15px;
+                          "
+                          >04</span
+                        >
+                      </div>
+                      <div class="univ-wrap">
+                        <div class="clg-name" data-i18n="ach4_t">Real-time under load</div>
+                        <div class="course" data-i18n="ach4_d">
+                          Equipment monitoring in the ERP over WebSocket, shifts stay in sync across workstations
+                          without delays.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-wrap" data-i18n="ach4_r">Real-time</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-5" id="projects">
+          <!-- проекты теперь настоящие, из публичных репозиториев на GitHub. ссылки не заглушки,
+             каждая ведёт на реальный репозиторий. если добавляешь новый проект - дай ссылку и
+             пропиши тексты с ключами p*_t / p*_0..2 / p*_type в ОБА словаря (I18N) -->
+          <div class="container">
+            <div class="section-header">
+              <div class="icon-wrap">
+                <img src="./icons/projects.svg" alt="Projects" loading="lazy" width="32" height="32" />
+              </div>
+              <div class="section-title" data-i18n="sec_projects">Projects</div>
+            </div>
+            <div class="card-wrapper">
+              <ul>
+                <li>
+                  <div class="card">
+                    <a
+                      class="img-wrapper"
+                      href="https://github.com/dorofeevb1/transcript"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="transcript repository on GitHub"
+                    >
+                      <div
+                        class="project-cover"
+                        style="
+                          background:
+                            radial-gradient(130% 150% at 85% -10%, rgba(255, 77, 109, 0.35), transparent 55%),
+                            linear-gradient(150deg, #2a1419, #0d0b0d 75%);
+                        "
+                      >
+                        <span class="cover-type" data-i18n="p1_type">Browser Extension</span>
+                        <span class="cover-mono" style="color: #ff4d6d">TR</span>
+                      </div>
+                    </a>
+                    <div class="card-content">
+                      <div class="upper-wrap">
+                        <div class="card-title" data-i18n="p1_t">
+                          Video Transcript — extension for YouTube, Rutube, VK
+                        </div>
+                        <div class="card-desc">
+                          <ul>
+                            <li data-i18n="p1_0">Full text of any video: timed subtitles, translation and export.</li>
+                            <li data-i18n="p1_1">
+                              Chrome MV3 + Firefox, no paid cloud APIs — everything in the browser.
+                            </li>
+                            <li data-i18n="p1_2">Free and open source.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="lower-wrap">
+                        <div class="techstack">
+                          <div class="text" data-i18n="p_tech">TechStack :</div>
+                          <div class="skill">TypeScript</div>
+                          <div class="skill">Chrome MV3</div>
+                          <div class="skill">Firefox</div>
+                        </div>
+                        <div class="action-wrapper">
+                          <a
+                            class="repo-btn"
+                            href="https://github.com/dorofeevb1/transcript"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Open repository on GitHub"
+                          >
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M12 0.666656C5.37 0.666656 0 6.17614 0 12.9712C0 18.4087 3.438 23.0197 8.205 24.6454C8.805 24.7613 9.025 24.3804 9.025 24.0538C9.025 23.7616 9.015 22.9874 9.01 21.9616C5.672 22.7035 4.968 20.3109 4.968 20.3109C4.422 18.8907 3.633 18.5109 3.633 18.5109C2.546 17.7481 3.717 17.7638 3.717 17.7638C4.922 17.8494 5.555 19.0316 5.555 19.0316C6.625 20.913 8.364 20.3693 9.05 20.0552C9.158 19.2591 9.467 18.7175 9.81 18.4097C7.145 18.1019 4.344 17.0438 4.344 12.3294C4.344 10.9865 4.809 9.88878 5.579 9.02792C5.444 8.71697 5.039 7.46586 5.684 5.77128C5.684 5.77128 6.689 5.44154 8.984 7.03282C9.944 6.75943 10.964 6.62378 11.984 6.61752C13.004 6.62378 14.024 6.75943 14.984 7.03282C17.264 5.44154 18.269 5.77128 18.269 5.77128C18.914 7.46586 18.509 8.71697 18.389 9.02792C19.154 9.88878 19.619 10.9865 19.619 12.3294C19.619 17.0563 16.814 18.0967 14.144 18.3993C14.564 18.7686 14.954 19.5231 14.954 20.6761C14.954 22.3227 14.939 23.6458 14.939 24.0454C14.939 24.3679 15.149 24.7529 15.764 24.6298C20.565 23.0145 24 18.4003 24 12.9712C24 6.17614 18.627 0.666656 12 0.666656Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                            <span data-i18n="p_repo">GitHub</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <a
+                      class="img-wrapper"
+                      href="https://github.com/dorofeevb1/video-context"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="video-context repository on GitHub"
+                    >
+                      <div
+                        class="project-cover"
+                        style="
+                          background:
+                            radial-gradient(130% 150% at 85% -10%, rgba(56, 189, 248, 0.3), transparent 55%),
+                            linear-gradient(150deg, #14202e, #0a0e13 75%);
+                        "
+                      >
+                        <span class="cover-type" data-i18n="p2_type">Browser Extension</span>
+                        <span class="cover-mono" style="color: #38bdf8">VC</span>
+                      </div>
+                    </a>
+                    <div class="card-content">
+                      <div class="upper-wrap">
+                        <div class="card-title" data-i18n="p2_t">Video Context — YouTube → topics → sources</div>
+                        <div class="card-desc">
+                          <ul>
+                            <li data-i18n="p2_0">Turns YouTube subtitles into topic cards with links to sources.</li>
+                            <li data-i18n="p2_1">
+                              Pulls references from encyclopedias, scientific databases and the web.
+                            </li>
+                            <li data-i18n="p2_2">No backend at all — TypeScript, MIT.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="lower-wrap">
+                        <div class="techstack">
+                          <div class="text" data-i18n="p_tech">TechStack :</div>
+                          <div class="skill">TypeScript</div>
+                          <div class="skill">Chrome MV3</div>
+                          <div class="skill">MIT</div>
+                        </div>
+                        <div class="action-wrapper">
+                          <a
+                            class="repo-btn"
+                            href="https://github.com/dorofeevb1/video-context"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Open repository on GitHub"
+                          >
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M12 0.666656C5.37 0.666656 0 6.17614 0 12.9712C0 18.4087 3.438 23.0197 8.205 24.6454C8.805 24.7613 9.025 24.3804 9.025 24.0538C9.025 23.7616 9.015 22.9874 9.01 21.9616C5.672 22.7035 4.968 20.3109 4.968 20.3109C4.422 18.8907 3.633 18.5109 3.633 18.5109C2.546 17.7481 3.717 17.7638 3.717 17.7638C4.922 17.8494 5.555 19.0316 5.555 19.0316C6.625 20.913 8.364 20.3693 9.05 20.0552C9.158 19.2591 9.467 18.7175 9.81 18.4097C7.145 18.1019 4.344 17.0438 4.344 12.3294C4.344 10.9865 4.809 9.88878 5.579 9.02792C5.444 8.71697 5.039 7.46586 5.684 5.77128C5.684 5.77128 6.689 5.44154 8.984 7.03282C9.944 6.75943 10.964 6.62378 11.984 6.61752C13.004 6.62378 14.024 6.75943 14.984 7.03282C17.264 5.44154 18.269 5.77128 18.269 5.77128C18.914 7.46586 18.509 8.71697 18.389 9.02792C19.154 9.88878 19.619 10.9865 19.619 12.3294C19.619 17.0563 16.814 18.0967 14.144 18.3993C14.564 18.7686 14.954 19.5231 14.954 20.6761C14.954 22.3227 14.939 23.6458 14.939 24.0454C14.939 24.3679 15.149 24.7529 15.764 24.6298C20.565 23.0145 24 18.4003 24 12.9712C24 6.17614 18.627 0.666656 12 0.666656Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                            <span data-i18n="p_repo">GitHub</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <a
+                      class="img-wrapper"
+                      href="https://github.com/dorofeevb1/construction-journal"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="construction-journal repository on GitHub"
+                    >
+                      <div
+                        class="project-cover"
+                        style="
+                          background:
+                            radial-gradient(130% 150% at 85% -10%, rgba(251, 191, 36, 0.3), transparent 55%),
+                            linear-gradient(150deg, #251d12, #0d0b08 75%);
+                        "
+                      >
+                        <span class="cover-type" data-i18n="p3_type">Web app</span>
+                        <span class="cover-mono" style="color: #fbbf24">CJ</span>
+                      </div>
+                    </a>
+                    <div class="card-content">
+                      <div class="upper-wrap">
+                        <div class="card-title" data-i18n="p3_t">Construction Journal — site work log</div>
+                        <div class="card-desc">
+                          <ul>
+                            <li data-i18n="p3_0">For a foreman: date → work done → volume → who performed.</li>
+                            <li data-i18n="p3_1">Full-stack: React frontend + backend + PostgreSQL, Docker Compose.</li>
+                            <li data-i18n="p3_2">Playwright end-to-end tests and CI.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="lower-wrap">
+                        <div class="techstack">
+                          <div class="text" data-i18n="p_tech">TechStack :</div>
+                          <div class="skill">React</div>
+                          <div class="skill">PostgreSQL</div>
+                          <div class="skill">Docker</div>
+                          <div class="skill">Playwright</div>
+                        </div>
+                        <div class="action-wrapper">
+                          <a
+                            class="repo-btn"
+                            href="https://github.com/dorofeevb1/construction-journal"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Open repository on GitHub"
+                          >
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M12 0.666656C5.37 0.666656 0 6.17614 0 12.9712C0 18.4087 3.438 23.0197 8.205 24.6454C8.805 24.7613 9.025 24.3804 9.025 24.0538C9.025 23.7616 9.015 22.9874 9.01 21.9616C5.672 22.7035 4.968 20.3109 4.968 20.3109C4.422 18.8907 3.633 18.5109 3.633 18.5109C2.546 17.7481 3.717 17.7638 3.717 17.7638C4.922 17.8494 5.555 19.0316 5.555 19.0316C6.625 20.913 8.364 20.3693 9.05 20.0552C9.158 19.2591 9.467 18.7175 9.81 18.4097C7.145 18.1019 4.344 17.0438 4.344 12.3294C4.344 10.9865 4.809 9.88878 5.579 9.02792C5.444 8.71697 5.039 7.46586 5.684 5.77128C5.684 5.77128 6.689 5.44154 8.984 7.03282C9.944 6.75943 10.964 6.62378 11.984 6.61752C13.004 6.62378 14.024 6.75943 14.984 7.03282C17.264 5.44154 18.269 5.77128 18.269 5.77128C18.914 7.46586 18.509 8.71697 18.389 9.02792C19.154 9.88878 19.619 10.9865 19.619 12.3294C19.619 17.0563 16.814 18.0967 14.144 18.3993C14.564 18.7686 14.954 19.5231 14.954 20.6761C14.954 22.3227 14.939 23.6458 14.939 24.0454C14.939 24.3679 15.149 24.7529 15.764 24.6298C20.565 23.0145 24 18.4003 24 12.9712C24 6.17614 18.627 0.666656 12 0.666656Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                            <span data-i18n="p_repo">GitHub</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <a
+                      class="img-wrapper"
+                      href="https://github.com/dorofeevb1/seatingOnly"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="seatingOnly repository on GitHub"
+                    >
+                      <div
+                        class="project-cover"
+                        style="
+                          background:
+                            radial-gradient(130% 150% at 85% -10%, rgba(167, 139, 250, 0.32), transparent 55%),
+                            linear-gradient(150deg, #1e1730, #0d0a16 75%);
+                        "
+                      >
+                        <span class="cover-type" data-i18n="p4_type">Micro-frontends</span>
+                        <span class="cover-mono" style="color: #a78bfa">SO</span>
+                      </div>
+                    </a>
+                    <div class="card-content">
+                      <div class="upper-wrap">
+                        <div class="card-title" data-i18n="p4_t">seatingOnly — micro-frontend platform</div>
+                        <div class="card-desc">
+                          <ul>
+                            <li data-i18n="p4_0">
+                              Module Federation monorepo: host shell + admin and dashboard remotes.
+                            </li>
+                            <li data-i18n="p4_1">React 18, Vite, Redux Toolkit, shared UI kit and config packages.</li>
+                            <li data-i18n="p4_2">Vitest + MSW, Cypress e2e, Docker + nginx.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="lower-wrap">
+                        <div class="techstack">
+                          <div class="text" data-i18n="p_tech">TechStack :</div>
+                          <div class="skill">React</div>
+                          <div class="skill">Module Federation</div>
+                          <div class="skill">Vite</div>
+                          <div class="skill">Cypress</div>
+                        </div>
+                        <div class="action-wrapper">
+                          <a
+                            class="repo-btn"
+                            href="https://github.com/dorofeevb1/seatingOnly"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Open repository on GitHub"
+                          >
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M12 0.666656C5.37 0.666656 0 6.17614 0 12.9712C0 18.4087 3.438 23.0197 8.205 24.6454C8.805 24.7613 9.025 24.3804 9.025 24.0538C9.025 23.7616 9.015 22.9874 9.01 21.9616C5.672 22.7035 4.968 20.3109 4.968 20.3109C4.422 18.8907 3.633 18.5109 3.633 18.5109C2.546 17.7481 3.717 17.7638 3.717 17.7638C4.922 17.8494 5.555 19.0316 5.555 19.0316C6.625 20.913 8.364 20.3693 9.05 20.0552C9.158 19.2591 9.467 18.7175 9.81 18.4097C7.145 18.1019 4.344 17.0438 4.344 12.3294C4.344 10.9865 4.809 9.88878 5.579 9.02792C5.444 8.71697 5.039 7.46586 5.684 5.77128C5.684 5.77128 6.689 5.44154 8.984 7.03282C9.944 6.75943 10.964 6.62378 11.984 6.61752C13.004 6.62378 14.024 6.75943 14.984 7.03282C17.264 5.44154 18.269 5.77128 18.269 5.77128C18.914 7.46586 18.509 8.71697 18.389 9.02792C19.154 9.88878 19.619 10.9865 19.619 12.3294C19.619 17.0563 16.814 18.0967 14.144 18.3993C14.564 18.7686 14.954 19.5231 14.954 20.6761C14.954 22.3227 14.939 23.6458 14.939 24.0454C14.939 24.3679 15.149 24.7529 15.764 24.6298C20.565 23.0145 24 18.4003 24 12.9712C24 6.17614 18.627 0.666656 12 0.666656Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                            <span data-i18n="p_repo">GitHub</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <a
+                      class="img-wrapper"
+                      href="https://github.com/dorofeevb1/TextAnnotation"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="TextAnnotation repository on GitHub"
+                    >
+                      <div
+                        class="project-cover"
+                        style="
+                          background:
+                            radial-gradient(130% 150% at 85% -10%, rgba(45, 212, 191, 0.28), transparent 55%),
+                            linear-gradient(150deg, #0f2a27, #0a1211 75%);
+                        "
+                      >
+                        <span class="cover-type" data-i18n="p5_type">Angular SPA</span>
+                        <span class="cover-mono" style="color: #2dd4bf">TA</span>
+                      </div>
+                    </a>
+                    <div class="card-content">
+                      <div class="upper-wrap">
+                        <div class="card-title" data-i18n="p5_t">TextAnnotation — articles & annotation SPA</div>
+                        <div class="card-desc">
+                          <ul>
+                            <li data-i18n="p5_0">Angular 19 app for writing articles and annotating text fragments.</li>
+                            <li data-i18n="p5_1">Standalone components, signals, lazy routes — no UI libraries.</li>
+                            <li data-i18n="p5_2">Data persisted in localStorage.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="lower-wrap">
+                        <div class="techstack">
+                          <div class="text" data-i18n="p_tech">TechStack :</div>
+                          <div class="skill">Angular 19</div>
+                          <div class="skill">Signals</div>
+                          <div class="skill">TypeScript</div>
+                        </div>
+                        <div class="action-wrapper">
+                          <a
+                            class="repo-btn"
+                            href="https://github.com/dorofeevb1/TextAnnotation"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Open repository on GitHub"
+                          >
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M12 0.666656C5.37 0.666656 0 6.17614 0 12.9712C0 18.4087 3.438 23.0197 8.205 24.6454C8.805 24.7613 9.025 24.3804 9.025 24.0538C9.025 23.7616 9.015 22.9874 9.01 21.9616C5.672 22.7035 4.968 20.3109 4.968 20.3109C4.422 18.8907 3.633 18.5109 3.633 18.5109C2.546 17.7481 3.717 17.7638 3.717 17.7638C4.922 17.8494 5.555 19.0316 5.555 19.0316C6.625 20.913 8.364 20.3693 9.05 20.0552C9.158 19.2591 9.467 18.7175 9.81 18.4097C7.145 18.1019 4.344 17.0438 4.344 12.3294C4.344 10.9865 4.809 9.88878 5.579 9.02792C5.444 8.71697 5.039 7.46586 5.684 5.77128C5.684 5.77128 6.689 5.44154 8.984 7.03282C9.944 6.75943 10.964 6.62378 11.984 6.61752C13.004 6.62378 14.024 6.75943 14.984 7.03282C17.264 5.44154 18.269 5.77128 18.269 5.77128C18.914 7.46586 18.509 8.71697 18.389 9.02792C19.154 9.88878 19.619 10.9865 19.619 12.3294C19.619 17.0563 16.814 18.0967 14.144 18.3993C14.564 18.7686 14.954 19.5231 14.954 20.6761C14.954 22.3227 14.939 23.6458 14.939 24.0454C14.939 24.3679 15.149 24.7529 15.764 24.6298C20.565 23.0145 24 18.4003 24 12.9712C24 6.17614 18.627 0.666656 12 0.666656Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                            <span data-i18n="p_repo">GitHub</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card cta-card">
+                    <a class="cta-inner" href="https://github.com/dorofeevb1" target="_blank" rel="noopener">
+                      <span class="cta-avatar">
+                        <svg width="34" height="34" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12 0.666656C5.37 0.666656 0 6.17614 0 12.9712C0 18.4087 3.438 23.0197 8.205 24.6454C8.805 24.7613 9.025 24.3804 9.025 24.0538C9.025 23.7616 9.015 22.9874 9.01 21.9616C5.672 22.7035 4.968 20.3109 4.968 20.3109C4.422 18.8907 3.633 18.5109 3.633 18.5109C2.546 17.7481 3.717 17.7638 3.717 17.7638C4.922 17.8494 5.555 19.0316 5.555 19.0316C6.625 20.913 8.364 20.3693 9.05 20.0552C9.158 19.2591 9.467 18.7175 9.81 18.4097C7.145 18.1019 4.344 17.0438 4.344 12.3294C4.344 10.9865 4.809 9.88878 5.579 9.02792C5.444 8.71697 5.039 7.46586 5.684 5.77128C5.684 5.77128 6.689 5.44154 8.984 7.03282C9.944 6.75943 10.964 6.62378 11.984 6.61752C13.004 6.62378 14.024 6.75943 14.984 7.03282C17.264 5.44154 18.269 5.77128 18.269 5.77128C18.914 7.46586 18.509 8.71697 18.389 9.02792C19.154 9.88878 19.619 10.9865 19.619 12.3294C19.619 17.0563 16.814 18.0967 14.144 18.3993C14.564 18.7686 14.954 19.5231 14.954 20.6761C14.954 22.3227 14.939 23.6458 14.939 24.0454C14.939 24.3679 15.149 24.7529 15.764 24.6298C20.565 23.0145 24 18.4003 24 12.9712C24 6.17614 18.627 0.666656 12 0.666656Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </span>
+                      <span class="card-title" data-i18n="p6_t">More on GitHub</span>
+                      <span class="text" data-i18n="p6_0">Bots, tools, experiments and earlier Angular projects.</span>
+                      <span class="go" data-i18n="p6_go">View profile</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- подвал. телефон/вацап/почта мой, можно не менять -->
+      <footer>
+        <div class="container">
+          <div class="content-wrap">
+            <h3 class="title" data-i18n="f_title">Get In Touch</h3>
+            <div class="infos">
+              <a class="info-wrapper" href="mailto:dorofeevb1@gmail.com">
+                <div class="icon-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                    <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z" />
+                    <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z" />
+                    <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17" />
+                    <path
+                      fill="#c62828"
+                      d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"
+                    />
+                    <path
+                      fill="#fbc02d"
+                      d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"
+                    />
+                  </svg>
+                </div>
+                dorofeevb1@gmail.com
+              </a>
+              <a class="info-wrapper" href="tel:+79001241038">
+                <div class="icon-wrap">
+                  <?xml version="1.0" ?><svg
+                    height="18px"
+                    version="1.1"
+                    viewBox="0 0 18 18"
+                    width="18px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <title />
+                    <desc />
+                    <defs />
+                    <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                      <g fill="#fff" id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
+                        <g id="phone" transform="translate(85.000000, 126.000000)">
+                          <path
+                            d="M3.6,7.8 C5,10.6 7.4,12.9 10.2,14.4 L12.4,12.2 C12.7,11.9 13.1,11.8 13.4,12 C14.5,12.4 15.7,12.6 17,12.6 C17.6,12.6 18,13 18,13.6 L18,17 C18,17.6 17.6,18 17,18 C7.6,18 0,10.4 0,1 C0,0.4 0.4,0 1,0 L4.5,0 C5.1,0 5.5,0.4 5.5,1 C5.5,2.2 5.7,3.4 6.1,4.6 C6.2,4.9 6.1,5.3 5.9,5.6 L3.6,7.8 L3.6,7.8 Z"
+                            id="Shape"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                +7 (900) 124-10-38
+              </a>
+              <a class="info-wrapper" href="https://wa.me/79001241038">
+                <div class="icon-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 48 48"
+                    width="48px"
+                    height="48px"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                    />
+                    <path
+                      fill="#cfd8dc"
+                      d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                    />
+                    <path
+                      fill="#40c351"
+                      d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                    />
+                    <path
+                      fill="#fff"
+                      fill-rule="evenodd"
+                      d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                +7 (900) 124-10-38
+              </a>
+            </div>
+
+            <div class="credit">
+              <span data-i18n="f_credit">Developed By</span> <span class="highlight">&nbsp Bogdan Dorofeev</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <style>
+      /* всякие костыли поверх стилей шаблона - не хотел переписывать исходные .css,
+     решил тут дописать поверх. если что-то выглядит криво - искать правки здесь */
+      html {
+        color-scheme: dark;
+      }
+      body {
+        background-color: #0c100d;
+      }
+      #bg-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .main {
+        position: relative;
+        z-index: 1;
+      }
+      .darkmode section {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .banner {
+        background: none;
+      }
+      .banner::after {
+        display: none;
+      }
+      footer {
+        background-color: transparent !important;
+      }
+      .banner .social-icon-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 190px;
+        height: 190px;
+        z-index: 2;
+      }
+      .banner .social-icon-wrapper ul {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .banner .social-icon-wrapper ul li {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 42px;
+        height: 42px;
+        margin: -21px 0 0 -21px;
+        list-style: none;
+      }
+      .banner .social-icon-wrapper ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #171321;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+      .banner .social-icon-wrapper ul li a:hover {
+        background: #1f2b22;
+        transform: scale(1.08);
+      }
+      .banner .social-icon-wrapper ul li:nth-child(1) {
+        transform: rotate(0deg) translate(0, -128px) rotate(0deg);
+      }
+      .banner .social-icon-wrapper ul li:nth-child(2) {
+        transform: rotate(72deg) translate(0, -128px) rotate(-72deg);
+      }
+      .banner .social-icon-wrapper ul li:nth-child(3) {
+        transform: rotate(144deg) translate(0, -128px) rotate(-144deg);
+      }
+      .banner .social-icon-wrapper ul li:nth-child(4) {
+        transform: rotate(216deg) translate(0, -128px) rotate(-216deg);
+      }
+      .banner .social-icon-wrapper ul li:nth-child(5) {
+        transform: rotate(288deg) translate(0, -128px) rotate(-288deg);
+      }
+      .header .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #4caf50;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0;
+      }
+      .header .horizontal-list li.lang-item {
+        margin: 0 30px;
+      }
+      @media screen and (max-width: 991px) {
+        .header .horizontal-list li.lang-item {
+          width: 100%;
+          margin: 0;
+          border-bottom: 1px solid #2e2e2e;
+        }
+        .header .horizontal-list li.lang-item .lang-btn {
+          width: 100%;
+          text-align: left;
+          padding: 16px;
+          font-size: 16px;
+        }
+      }
+      .download-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        padding: 12px 20px;
+        border-radius: 10px;
+        transition:
+          background 0.2s ease-in-out,
+          transform 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      .download-btn:hover {
+        background: #43a047;
+        transform: translateY(-2px);
+      }
+      .download-btn.secondary {
+        background: transparent;
+        border: 2px solid #4caf50;
+        color: #4caf50;
+      }
+      .download-btn.secondary:hover {
+        background: rgba(76, 175, 80, 0.12);
+      }
+      @media screen and (max-width: 767px) {
+        .download-btns {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      /* кнопка переключения темы: в шапке, рядом с языком. иконок две - солнце/луна,
+     показываю нужную в зависимости от того, какой класс висит на body */
+      .header .theme-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #4caf50;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+      }
+      .header .theme-btn:focus {
+        outline: none;
+      }
+      .header .theme-btn:hover {
+        color: #43a047;
+      }
+      .header .theme-btn svg {
+        display: block;
+      }
+      .header .theme-btn .icon-moon {
+        display: none;
+      }
+      body.lightmode .header .theme-btn .icon-sun {
+        display: none;
+      }
+      body.lightmode .header .theme-btn .icon-moon {
+        display: block;
+      }
+      @media screen and (max-width: 991px) {
+        .header .horizontal-list li.lang-item .theme-btn {
+          width: 100%;
+          justify-content: flex-start;
+          padding: 16px;
+          font-size: 16px;
+        }
+      }
+
+      /* светлая тема: отдельный класс на body, все переопределения собраны ниже.
+     темнота осталась дефолтной, так что светлая - только по явному нажатию */
+      body.lightmode {
+        background-color: #f2f4f7;
+        background-image: linear-gradient(180deg, #f7f9fb, #ecf0f4 60%, #e4e9ee);
+        color: #1c1f26;
+      }
+      body.lightmode section {
+        border-bottom: 1px solid rgba(12, 16, 20, 0.07);
+      }
+      body.lightmode .header {
+        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+      }
+      body.lightmode .header .horizontal-list li a {
+        color: #1c1f26;
+      }
+      body.lightmode .header .horizontal-list li a::after {
+        background-color: #4caf50;
+      }
+      body.lightmode .header .horizontal-list li a:hover {
+        color: #4caf50;
+      }
+      body.lightmode .header .horizontal-list li a:hover::after {
+        background-color: #4caf50;
+      }
+      body.lightmode .banner .social-icon-wrapper ul li a {
+        background: #1d2530;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+      }
+      body.lightmode .banner .social-icon-wrapper ul li a:hover {
+        background: #2a3644;
+      }
+      body.lightmode .section-3 .aeroplane-track {
+        background-color: #fff;
+        border-left: 4px dashed #d4d9df;
+      }
+      body.lightmode .section-3 .tile-header .right-wrap,
+      body.lightmode .section-4 .card-wrapper .right-wrap {
+        color: #374151;
+      }
+      body.lightmode .section-3 .tile-header .left-wrap .designation,
+      body.lightmode .section-4 .card-wrapper .course {
+        color: #1b5e20;
+      }
+      body.lightmode .section-4 .card-wrapper .card {
+        box-shadow: 0 4px 6px rgba(15, 23, 42, 0.08);
+      }
+      body.lightmode .section-5 .card-wrapper .card {
+        background-color: #fff;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-desc li {
+        color: #3a4350;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .techstack .skill {
+        background-color: #e8edf2;
+        color: #26303c;
+      }
+      body.lightmode footer .title {
+        color: #1c1f26;
+      }
+      @media screen and (max-width: 991px) {
+        body.lightmode .header .horizontal-list {
+          background-color: #fff !important;
+          box-shadow: 0 4px 20px rgba(15, 23, 42, 0.12) !important;
+        }
+        body.lightmode .header .horizontal-list a,
+        body.lightmode .header .horizontal-list li.lang-item {
+          border-bottom: 1px solid #e6eaf0;
+        }
+        body.lightmode .header .horizontal-list li.lang-item {
+          border-bottom: 1px solid #e6eaf0;
+        }
+      }
+
+      /* ===== светлая тема: доп. фиксы ===== */
+      body.lightmode .header {
+        background: rgba(247, 249, 251, 0.82);
+        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+      }
+      @media screen and (min-width: 992px) {
+        body.lightmode .header {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+        }
+      }
+      body.lightmode .header .menu .open-menu path {
+        fill: #1c1f26;
+      }
+      body.lightmode footer a[href^='tel:'] .icon-wrap svg g#Icons-Communication {
+        fill: #1c1f26;
+      }
+      body.lightmode .section-2 .skills-wrapper .skill {
+        background-color: #ffffff;
+        box-shadow: 0 2px 12px rgba(15, 23, 42, 0.07);
+      }
+      body.lightmode .section-4 .card-wrapper .card {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(15, 23, 42, 0.08);
+      }
+      body.lightmode .banner .content-wrap .right-wrap .img-wrapper {
+        box-shadow:
+          0 8px 16px rgba(15, 23, 42, 0.18),
+          0 4px 8px rgba(15, 23, 42, 0.1);
+      }
+      /* секция проектов: светлые чипы не трогаем (есть выше), а вот кнопку репо и CTA надо */
+      body.lightmode .section-5 .card-wrapper .card .card-content .action-wrapper a.repo-btn {
+        background: rgba(28, 31, 38, 0.06);
+        border-color: rgba(28, 31, 38, 0.18);
+        color: #1c1f26;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .action-wrapper a.repo-btn:hover {
+        background: rgba(28, 31, 38, 0.12);
+        border-color: #2e7d32;
+        color: #14532d;
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card {
+        background: linear-gradient(160deg, #2e7d32, #1b5e20);
+        border-color: rgba(27, 94, 32, 0.6);
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .cta-inner .text {
+        color: rgba(255, 255, 255, 0.85);
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .cta-inner .card-title,
+      body.lightmode .section-5 .card-wrapper .card.cta-card .go {
+        color: #ffffff;
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .cta-avatar {
+        background: rgba(255, 255, 255, 0.16);
+        color: #ffffff;
+      }
+
+      /* светлая тема, проход 2: убрал сине-зелёное и бледность.
+         фон тёплый и плотнее, акцент - терракота (#b4533a). структура прежняя.
+         если терракота не нравится - замени цвета ниже на свои */
+      body.lightmode {
+        background-color: #ece8e0;
+        background-image: none;
+        color: #26282e;
+      }
+      body.lightmode section {
+        border-bottom: 1px solid rgba(58, 52, 44, 0.08);
+      }
+      body.lightmode .header {
+        background: rgba(245, 243, 237, 0.92);
+        box-shadow: 0 2px 10px rgba(58, 52, 44, 0.1);
+      }
+      body.lightmode .header .lang-btn,
+      body.lightmode .header .theme-btn {
+        color: #b4533a;
+      }
+      body.lightmode .header .lang-btn:hover,
+      body.lightmode .header .theme-btn:hover {
+        color: #8f3f2b;
+      }
+      body.lightmode .header .horizontal-list li a:hover,
+      body.lightmode .header .horizontal-list li a:hover::after {
+        color: #b4533a;
+      }
+      body.lightmode .header .horizontal-list li a::after {
+        background-color: #b4533a;
+      }
+      body.lightmode .download-btn {
+        background: #b4533a;
+      }
+      body.lightmode .download-btn:hover {
+        background: #9c4630;
+      }
+      body.lightmode .download-btn.secondary {
+        background: transparent;
+        border-color: #b4533a;
+        color: #b4533a;
+      }
+      body.lightmode .download-btn.secondary:hover {
+        background: rgba(180, 83, 58, 0.1);
+      }
+      body.lightmode .section-3 .tile-content li::before {
+        border-color: #b4533a #b4533a transparent transparent;
+      }
+      body.lightmode .section-3 .tile-header .left-wrap .designation,
+      body.lightmode .section-4 .card-wrapper .course {
+        color: #9c4630;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-desc li::marker {
+        color: #b4533a;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .techstack .skill {
+        background-color: #efece5;
+        color: #3f3b36;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .action-wrapper a.repo-btn {
+        background: rgba(58, 52, 44, 0.06);
+        border-color: rgba(58, 52, 44, 0.16);
+        color: #26282e;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .action-wrapper a.repo-btn:hover {
+        background: rgba(58, 52, 44, 0.1);
+        border-color: #b4533a;
+        color: #8f3f2b;
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card {
+        background: linear-gradient(160deg, #f7f2e9, #efe7da);
+        border: 1px solid rgba(180, 83, 58, 0.35);
+        box-shadow: 0 6px 18px rgba(58, 52, 44, 0.08);
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .cta-avatar {
+        background: #b4533a;
+        color: #ffffff;
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .cta-inner .card-title {
+        color: #26282e;
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .go {
+        color: #b4533a;
+      }
+      body.lightmode .section-5 .card-wrapper .card.cta-card .cta-inner .text {
+        color: #5d574e;
+      }
+      body.lightmode .banner .content-wrap .right-wrap .img-wrapper {
+        box-shadow:
+          0 8px 16px rgba(58, 52, 44, 0.18),
+          0 4px 8px rgba(58, 52, 44, 0.1);
+      }
+      body.lightmode .section-2 .skills-wrapper .skill {
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(58, 52, 44, 0.07);
+      }
+      body.lightmode .section-3 .aeroplane-track {
+        background-color: transparent;
+        border-left: 4px dashed #d8d2c6;
+      }
+      body.lightmode .section-4 .card-wrapper .card,
+      body.lightmode .section-5 .card-wrapper .card {
+        background-color: #ffffff;
+        box-shadow: 0 6px 18px rgba(58, 52, 44, 0.08);
+      }
+      body.lightmode footer .title {
+        color: #26282e;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .card-title {
+        color: #26282e;
+      }
+      body.lightmode .section-5 .card-wrapper .card .card-content .techstack .text {
+        color: #5d574e;
+      }
+      body.lightmode .section-5 .card-wrapper .card .project-cover {
+        background:
+          radial-gradient(120% 150% at 85% -10%, rgba(180, 83, 58, 0.18), transparent 55%),
+          linear-gradient(150deg, #f7f3ea, #ece5d8 75%) !important;
+      }
+      body.lightmode .section-5 .card-wrapper .card .project-cover::before {
+        background-image: radial-gradient(rgba(58, 52, 44, 0.16) 1px, transparent 1px);
+        opacity: 0.5;
+      }
+      body.lightmode .section-5 .card-wrapper .card .project-cover .cover-type {
+        color: #8f3f2b;
+      }
+      body.lightmode .section-5 .card-wrapper .card .project-cover .cover-mono {
+        filter: drop-shadow(0 4px 10px rgba(58, 52, 44, 0.16));
+        opacity: 0.92;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./styles/home.css" />
+    <script>
+      const openMenu = document.querySelector('.open-menu');
+      const closeMenu = document.querySelector('.close-menu');
+      const navMenus = document.querySelectorAll('.header .horizontal-list li');
+
+      // мобильное меню: клик по бутерброду или по пункту закрывает
+      openMenu.addEventListener('click', e => {
+        toggleScrollRestrict();
+      });
+
+      closeMenu.addEventListener('click', e => {
+        toggleScrollRestrict();
+      });
+
+      navMenus.forEach(listItem => {
+        listItem.addEventListener('click', () => {
+          if (window.innerWidth <= 991) {
+            toggleScrollRestrict();
+          }
+        });
+      });
+
+      function toggleScrollRestrict() {
+        document.body.classList.toggle('showmenubar');
+        // почему-то без этого body скроллится под меню, оставил как есть
+      }
+    </script>
+    <script>
+      // тема: дефолт тёмная, но выбор запоминаем в localStorage,
+      // чтобы при перезагрузке не сбрасывалось на тёмную каждый раз
+      (function () {
+        var body = document.body;
+
+        function switchTheme(t, save) {
+          // на body два класса-антагониста, чтобы не переписывать стили шаблона
+          body.classList.remove(t === 'light' ? 'darkmode' : 'lightmode');
+          body.classList.add(t === 'light' ? 'lightmode' : 'darkmode');
+          // без color-scheme хром в тёмной системе сам инвертирует цвета страницы
+          // (долго не могли понять, почему тёмная тема наоборот становится светлой)
+          document.documentElement.style.colorScheme = t === 'light' ? 'light' : 'dark';
+          var btn = document.getElementById('themeToggle');
+          if (btn) {
+            btn.setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+          }
+          if (save) {
+            try {
+              localStorage.setItem('theme', t);
+            } catch (e) {}
+          }
+          // фон-сетка слушает этот ивент и перекрашивает точки под тему
+          try {
+            document.dispatchEvent(new CustomEvent('themechange', { detail: t }));
+          } catch (e) {}
+        }
+
+        var saved = null;
+        try {
+          saved = localStorage.getItem('theme');
+        } catch (e) {}
+        switchTheme(saved === 'light' || saved === 'dark' ? saved : 'dark', false);
+
+        document.getElementById('themeToggle').addEventListener('click', function () {
+          switchTheme(body.classList.contains('lightmode') ? 'dark' : 'light', true);
+        });
+      })();
+    </script>
+    <script>
+      // словари EN/RU. ВАЖНО: когда добавляешь новый data-i18n - текст нужно прописать
+      // в ОБА словаря и добавить атрибут в нужном месте разметки, иначе будет пусто
+      const I18N = {
+        en: {
+          nav_skills: 'Skills',
+          nav_experience: 'Experience',
+          nav_achievements: 'Achievements',
+          nav_projects: 'Projects',
+          banner_title: "Hi, I'm Bogdan Dorofeev,",
+          banner_subtitle: 'Frontend Developer',
+          banner_desc:
+            'Frontend developer with 5 years of commercial experience in JavaScript. Specializing in Angular + TypeScript on large-scale product projects (healthcare, ERP, analytics). Writing unit and automation tests with pytest and Selenium, configuring CI/CD (GitLab CI, GitHub Actions) and nginx. Experienced with a modular, micro-frontend-like architecture - building independent modules with their own state (NgRx) and integrating them into a single application. Focused on quality, testability, and predictable releases.',
+          sec_skills: 'Skills',
+          sec_experience: 'Experience',
+          sec_achievements: 'Achievements',
+          ach1_t: 'Independent modules in one app',
+          ach1_d:
+            'Modular architecture in the spirit of micro-frontends: every module carries its own NgRx state and everything assembles into a single product.',
+          ach1_r: 'Architecture',
+          ach2_t: 'Releases stopped slipping',
+          ach2_d:
+            'Set up CI/CD (GitLab CI, GitHub Actions), Docker and nginx - deploys became predictable, only verified code reaches production.',
+          ach2_r: 'Delivery',
+          ach3_t: 'Tests that actually catch bugs',
+          ach3_d: 'Unit and E2E suites (Jest, Cypress, pytest + Selenium): regressions stopped leaking into prod.',
+          ach3_r: 'Quality',
+          ach4_t: 'Real-time under load',
+          ach4_d:
+            'Equipment monitoring in the ERP over WebSocket, shifts stay in sync across workstations without delays.',
+          ach4_r: 'Real-time',
+          sec_projects: 'Projects',
+          e1_desig: 'Frontend Developer (Angular)',
+          e2_desig: 'Frontend Developer / System Analyst',
+          e3_desig: 'Frontend Engineer',
+          e4_desig: 'Software Engineer / Frontend Developer',
+          e1_0: 'Project: a suite of medical information systems for patient management, nurse shift scheduling, and surgery records.',
+          e1_1: 'Fully rewrote the key product modules from React to Angular.',
+          e1_2: 'Built interfaces for nurse shift management, patient intake, staff scheduling, and surgery records.',
+          e1_3: 'Implemented application state management with NgRx.',
+          e1_4: 'Developed real-time synchronization of shifts and statuses across workstations via WebSocket.',
+          e1_5: 'Created responsive interfaces for tablets and desktop workstations.',
+          e1_6: 'Collaborated with system analysts and QA on requirements refinement, testing, and release stabilization.',
+          e1_7: 'Technologies: Angular, TypeScript, RxJS, NgRx, Angular Material, PrimeNG, Tailwind CSS, WebSocket, REST API, Git.',
+          e1_8: 'Key achievements: unified the frontend stack by migrating key modules from React to Angular; enabled real-time data sync for medical staff; delivered interfaces adapted for tablet and desktop clinic workflows; improved release predictability through early requirements work and joint QA problem-solving.',
+          e2_0: "Project: a corporate ERP and CRM system automating the plant's production processes.",
+          e2_1: 'Built a modular ERP system from scratch on Angular 16.',
+          e2_2: 'Analyzed production processes and formalized system requirements.',
+          e2_3: 'Developed business logic for order management and product readiness time calculation.',
+          e2_4: 'Implemented real-time equipment monitoring and operator task management via WebSocket.',
+          e2_5: 'Created a Kanban system and an internal corporate messenger.',
+          e2_6: 'Set up CI/CD with automated testing and Docker deployment.',
+          e2_7: 'Adopted ESLint, commitlint, and Husky for code quality control and unified development rules.',
+          e2_8: 'Prepared technical specifications for the development team.',
+          e2_9: 'Technologies: Angular 16, TypeScript, RxJS, WebSocket, REST API, Docker, GitLab CI/CD, ESLint, commitlint, Husky, Linux, Nginx, Git.',
+          e2_10:
+            'Key achievements: delivered the full ERP lifecycle - from production process analysis and TZ preparation to system rollout; automated order tracking and product readiness estimation; enabled live equipment and task statuses via WebSocket; improved release reliability with CI/CD and containerized deployment; established baseline quality standards in the project.',
+          e3_0: 'Project: an analytics system with dashboards and visualization of large data volumes.',
+          e3_1: 'Designed and extended interfaces of the analytics system.',
+          e3_2: 'Built components and user flows for working with dashboards.',
+          e3_3: 'Improved UX for viewing and processing large data volumes.',
+          e3_4: 'Optimized the rendering of tables, widgets, and analytics screens.',
+          e3_5: 'Maintained the existing frontend jQuery codebase.',
+          e3_6: 'Technologies: JavaScript, jQuery, HTML5, CSS3, REST API, Git.',
+          e3_7: 'Key achievements: improved user flows for high-load analytics dashboards; boosted navigation and data readability; quickly onboarded into product support and extended the legacy jQuery code.',
+          e4_0: 'Project: web applications, Telegram bots, and automation and data parsing tools for client projects.',
+          e4_1: 'Built client web applications with Angular.',
+          e4_2: 'Integrated frontend with REST APIs.',
+          e4_3: 'Wrote Python scripts for routine automation and data parsing.',
+          e4_4: 'Developed Telegram bots with custom business logic.',
+          e4_5: 'Configured Docker environments, CI/CD processes, and client deployments.',
+          e4_6: 'Provided technical support, fixed bugs, and extended existing projects.',
+          e4_7: 'Delivered a data collection system for Russian Railways (RZD).',
+          e4_8: 'Technologies: Angular 14+, React, Vue3, TypeScript, JavaScript, HTML5, CSS3, Python, Django, FastAPI, Aiogram, Telethon, REST API, Docker, GitHub Actions, GitLab CI/CD, Linux, Git.',
+          e4_9: 'Key achievements: delivered end-to-end client solutions - from requirements to deployment and technical support; automated data collection and processing with Python scripts and parsers; built Telegram bots with integrations and applied business logic; shortened project deployment time through containerization and CI/CD.',
+          e5_0: 'Project: an analytics platform, desktop QR-code generator, and a Raspberry Pi IoT accounting system.',
+          e5_1: 'Developed an analytics interface in Angular with RxJS.',
+          e5_2: 'Built a desktop QR-code generator with Python and PyQt5.',
+          e5_3: 'Designed the PostgreSQL database schema.',
+          e5_4: 'Set up Docker infrastructure for local and server deployments.',
+          e5_5: 'Developed an IoT system on Raspberry Pi.',
+          e5_6: 'Integrated scanners and hardware with the system backend.',
+          e5_7: 'Contributed to the architecture and business logic design.',
+          e5_8: 'Technologies: Angular, TypeScript, JavaScript, RxJS, Python, PyQt5, PostgreSQL, Docker, Raspberry Pi, IoT, REST API, Linux, Git.',
+          e5_9: 'Key achievements: built a reactive analytics frontend; created a desktop app automating QR-code generation; designed a Raspberry Pi IoT solution with scanner integration; prepared the PostgreSQL schema and Docker infrastructure for reproducible deployments.',
+          p1_t: 'Video Transcript — extension for YouTube, Rutube, VK',
+          p1_0: 'Full text of any video: timed subtitles, translation and export.',
+          p1_1: 'Chrome MV3 + Firefox, no paid cloud APIs — everything in the browser.',
+          p1_2: 'Free and open source.',
+          p1_type: 'Browser Extension',
+          p2_t: 'Video Context — YouTube → topics → sources',
+          p2_0: 'Turns YouTube subtitles into topic cards with links to sources.',
+          p2_1: 'Pulls references from encyclopedias, scientific databases and the web.',
+          p2_2: 'No backend at all — TypeScript, MIT.',
+          p2_type: 'Browser Extension',
+          p3_t: 'Construction Journal — site work log',
+          p3_0: 'For a foreman: date → work done → volume → who performed.',
+          p3_1: 'Full-stack: React frontend + backend + PostgreSQL, Docker Compose.',
+          p3_2: 'Playwright end-to-end tests and CI.',
+          p3_type: 'Web app',
+          p4_t: 'seatingOnly — micro-frontend platform',
+          p4_0: 'Module Federation monorepo: host shell + admin and dashboard remotes.',
+          p4_1: 'React 18, Vite, Redux Toolkit, shared UI kit and config packages.',
+          p4_2: 'Vitest + MSW, Cypress e2e, Docker + nginx.',
+          p4_type: 'Micro-frontends',
+          p5_t: 'TextAnnotation — articles & annotation SPA',
+          p5_0: 'Angular 19 app for writing articles and annotating text fragments.',
+          p5_1: 'Standalone components, signals, lazy routes — no UI libraries.',
+          p5_2: 'Data persisted in localStorage.',
+          p5_type: 'Angular SPA',
+          p6_t: 'More on GitHub',
+          p6_0: 'Bots, tools, experiments and earlier Angular projects.',
+          p6_go: 'View profile',
+          p_repo: 'GitHub',
+
+          p_tech: 'TechStack :',
+          f_title: 'Get In Touch',
+          f_credit: 'Developed By',
+          dl_pdf: 'Download Resume (PDF)',
+          dl_doc: 'DOC',
+        },
+        ru: {
+          nav_skills: 'Навыки',
+          nav_experience: 'Опыт',
+          nav_achievements: 'Достижения',
+          nav_projects: 'Проекты',
+          banner_title: 'Привет, я Богдан Дорофеев,',
+          banner_subtitle: 'Фронтенд-разработчик',
+          banner_desc:
+            'Фронтенд-разработчик с 5-летним коммерческим опытом на JavaScript. Специализируюсь на Angular + TypeScript в крупных продуктовых проектах (здравоохранение, ERP, аналитика). Пишу модульные и интеграционные тесты с pytest и Selenium, настраиваю CI/CD (GitLab CI, GitHub Actions) и nginx. Имею опыт работы с модульной архитектурой в стиле микрофронтендов — построением независимых модулей с собственным состоянием (NgRx) и интеграцией их в единое приложение. Ориентирован на качество, тестируемость и предсказуемые релизы.',
+          sec_skills: 'Навыки',
+          sec_experience: 'Опыт работы',
+          sec_achievements: 'Достижения',
+          ach1_t: 'Независимые модули в одном приложении',
+          ach1_d:
+            'Модульная архитектура в духе micro-frontends: у каждого модуля свой NgRx-стейт, и всё собирается в единый продукт.',
+          ach1_r: 'Архитектура',
+          ach2_t: 'Релизы перестали срываться',
+          ach2_d:
+            'Настроил CI/CD (GitLab CI, GitHub Actions), Docker и nginx — деплои стали предсказуемыми, до прода доезжает только проверенное.',
+          ach2_r: 'Доставка',
+          ach3_t: 'Тесты, которые реально ловят баги',
+          ach3_d: 'Юнит и E2E-наборы (Jest, Cypress, pytest + Selenium): регрессы перестали утекать в прод.',
+          ach3_r: 'Качество',
+          ach4_t: 'Реальное время под нагрузкой',
+          ach4_d:
+            'Мониторинг оборудования в ERP через WebSocket, смены синхронизируются между рабочими местами без задержек.',
+          ach4_r: 'Real-time',
+          sec_projects: 'Проекты',
+          e1_desig: 'Фронтенд-разработчик (Angular)',
+          e2_desig: 'Фронтенд-разработчик / Системный аналитик',
+          e3_desig: 'Фронтенд-инженер',
+          e4_desig: 'Инженер-программист / Фронтенд-разработчик',
+          e1_0: 'Проект: комплекс медицинских информационных систем для управления пациентами, составления графиков смен медсестёр и ведения журналов операций.',
+          e1_1: 'Полностью переписал ключевые модули продукта с React на Angular.',
+          e1_2: 'Разработал интерфейсы для управления сменами медсестёр, приёма пациентов, планирования персонала и журналов операций.',
+          e1_3: 'Реализовал управление состоянием приложения на NgRx.',
+          e1_4: 'Разработал синхронизацию смен и статусов между рабочими местами в реальном времени через WebSocket.',
+          e1_5: 'Создал адаптивные интерфейсы для планшетов и стационарных рабочих мест.',
+          e1_6: 'Совместно с системными аналитиками и QA участвовал в уточнении требований, тестировании и стабилизации релизов.',
+          e1_7: 'Технологии: Angular, TypeScript, RxJS, NgRx, Angular Material, PrimeNG, Tailwind CSS, WebSocket, REST API, Git.',
+          e1_8: 'Ключевые достижения: унифицировал фронтенд-стек, переведя ключевые модули с React на Angular; обеспечил синхронизацию данных для медперсонала в реальном времени; сдал интерфейсы, адаптированные под планшеты и рабочие места клиники; повысил предсказуемость релизов за счёт ранней работы с требованиями и совместного решения проблем с QA.',
+          e2_0: 'Проект: корпоративная ERP- и CRM-система, автоматизирующая производственные процессы завода.',
+          e2_1: 'С нуля построил модульную ERP-систему на Angular 16.',
+          e2_2: 'Проанализировал производственные процессы и формализовал системные требования.',
+          e2_3: 'Разработал бизнес-логику управления заказами и расчёта сроков готовности продукции.',
+          e2_4: 'Реализовал мониторинг оборудования и управление задачами операторов в реальном времени через WebSocket.',
+          e2_5: 'Создал систему канбан-досок и внутренний корпоративный мессенджер.',
+          e2_6: 'Настроил CI/CD с автоматическим тестированием и деплоем в Docker.',
+          e2_7: 'Внедрил ESLint, commitlint и Husky для контроля качества кода и единых правил разработки.',
+          e2_8: 'Подготовил технические задания для команды разработки.',
+          e2_9: 'Технологии: Angular 16, TypeScript, RxJS, WebSocket, REST API, Docker, GitLab CI/CD, ESLint, commitlint, Husky, Linux, Nginx, Git.',
+          e2_10:
+            'Ключевые достижения: провёл полный жизненный цикл ERP — от анализа производственных процессов и подготовки ТЗ до внедрения системы; автоматизировал отслеживание заказов и расчёт готовности продукции; обеспечил актуальные статусы оборудования и задач через WebSocket; повысил надёжность релизов за счёт CI/CD и контейнеризации; заложил базовые стандарты качества в проекте.',
+          e3_0: 'Проект: аналитическая система с дашбордами и визуализацией больших объёмов данных.',
+          e3_1: 'Проектировал и расширял интерфейсы аналитической системы.',
+          e3_2: 'Разрабатывал компоненты и пользовательские сценарии работы с дашбордами.',
+          e3_3: 'Улучшал UX просмотра и обработки больших объёмов данных.',
+          e3_4: 'Оптимизировал отрисовку таблиц, виджетов и аналитических экранов.',
+          e3_5: 'Поддерживал существующую фронтенд-кодовую базу jQuery.',
+          e3_6: 'Технологии: JavaScript, jQuery, HTML5, CSS3, REST API, Git.',
+          e3_7: 'Ключевые достижения: улучшил пользовательские сценарии высоконагруженных аналитических дашбордов; повысил удобство навигации и читаемость данных; быстро включился в поддержку продукта и развивал легаси-код на jQuery.',
+          e4_0: 'Проект: веб-приложения, Telegram-боты и инструменты автоматизации и парсинга данных для клиентских проектов.',
+          e4_1: 'Разрабатывал клиентские веб-приложения на Angular.',
+          e4_2: 'Интегрировал фронтенд с REST API.',
+          e4_3: 'Писал Python-скрипты для автоматизации рутины и парсинга данных.',
+          e4_4: 'Разрабатывал Telegram-ботов с бизнес-логикой заказчика.',
+          e4_5: 'Настраивал Docker-окружения, CI/CD и деплой для клиентов.',
+          e4_6: 'Оказывал техническую поддержку, исправлял баги и развивал существующие проекты.',
+          e4_7: 'Сдал систему сбора данных для Российских железных дорог (РЖД).',
+          e4_8: 'Технологии: Angular 14+, React, Vue3, TypeScript, JavaScript, HTML5, CSS3, Python, Django, FastAPI, Aiogram, Telethon, REST API, Docker, GitHub Actions, GitLab CI/CD, Linux, Git.',
+          e4_9: 'Ключевые достижения: сдавал комплексные клиентские решения — от требований до деплоя и технической поддержки; автоматизировал сбор и обработку данных Python-скриптами и парсерами; разрабатывал Telegram-ботов с интеграциями и бизнес-логикой; сократил время развёртывания проектов за счёт контейнеризации и CI/CD.',
+          e5_0: 'Проект: аналитическая платформа, десктопный генератор QR-кодов и IoT-система учёта на Raspberry Pi.',
+          e5_1: 'Разработал аналитический интерфейс на Angular с RxJS.',
+          e5_2: 'Разработал десктопный генератор QR-кодов на Python и PyQt5.',
+          e5_3: 'Спроектировал схему базы данных PostgreSQL.',
+          e5_4: 'Настроил Docker-инфраструктуру для локального и серверного развёртывания.',
+          e5_5: 'Разработал IoT-систему на Raspberry Pi.',
+          e5_6: 'Интегрировал сканеры и оборудование с бэкендом системы.',
+          e5_7: 'Участвовал в проектировании архитектуры и бизнес-логики.',
+          e5_8: 'Технологии: Angular, TypeScript, JavaScript, RxJS, Python, PyQt5, PostgreSQL, Docker, Raspberry Pi, IoT, REST API, Linux, Git.',
+          e5_9: 'Ключевые достижения: построил реактивный аналитический фронтенд; создал десктоп-приложение, автоматизирующее генерацию QR-кодов; спроектировал IoT-решение на Raspberry Pi с интеграцией сканеров; подготовил схему PostgreSQL и Docker-инфраструктуру для воспроизводимых деплоев.',
+          p1_t: 'Video Transcript — расширение для YouTube, Rutube, VK',
+          p1_0: 'Полный текст любого видео: тайм-коды, перевод и экспорт субтитров.',
+          p1_1: 'Chrome MV3 + Firefox, без платных облачных API — всё в браузере.',
+          p1_2: 'Бесплатно и с открытым исходным кодом.',
+          p1_type: 'Расширение для браузера',
+          p2_t: 'Video Context — YouTube → темы → источники',
+          p2_0: 'Превращает субтитры YouTube в карточки тем со ссылками на источники.',
+          p2_1: 'Подтягивает ссылки из энциклопедий, научных баз и веба.',
+          p2_2: 'Без бэкенда вообще — TypeScript, MIT.',
+          p2_type: 'Расширение для браузера',
+          p3_t: 'Журнал работ — учёт работ на стройплощадке',
+          p3_0: 'Для прораба: дата → выполненная работа → объём → исполнитель.',
+          p3_1: 'Full-stack: фронтенд React + бэкенд + PostgreSQL, Docker Compose.',
+          p3_2: 'Playwright end-to-end тесты и CI.',
+          p3_type: 'Веб-приложение',
+          p4_t: 'seatingOnly — микрофронтенд-платформа',
+          p4_0: 'Монорепозиторий Module Federation: host-оболочка + ремоуты admin и dashboard.',
+          p4_1: 'React 18, Vite, Redux Toolkit, общий UI-kit и конфиг-пакеты.',
+          p4_2: 'Vitest + MSW, Cypress e2e, Docker + nginx.',
+          p4_type: 'Микрофронтенды',
+          p5_t: 'TextAnnotation — SPA для статей и аннотаций',
+          p5_0: 'Приложение на Angular 19 для написания статей и аннотирования фрагментов текста.',
+          p5_1: 'Standalone-компоненты, signals, ленивые роуты — без UI-библиотек.',
+          p5_2: 'Данные хранятся в localStorage.',
+          p5_type: 'Angular SPA',
+          p6_t: 'Больше на GitHub',
+          p6_0: 'Боты, инструменты, эксперименты и ранние Angular-проекты.',
+          p6_go: 'Открыть профиль',
+          p_repo: 'GitHub',
+
+          p_tech: 'Стек технологий :',
+          f_title: 'Свяжитесь со мной',
+          f_credit: 'Разработал',
+          dl_pdf: 'Скачать резюме (PDF)',
+          dl_doc: 'DOC',
+        },
+      };
+
+      function applyLang(lang) {
+        const dict = I18N[lang] || I18N.en;
+        document.documentElement.lang = lang;
+        // проходим по всем data-i18n и подменяем текст
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var v = dict[el.getAttribute('data-i18n')];
+          if (v !== undefined) el.textContent = v;
+        });
+        // title тоже переводим, иначе на вкладке будет EN при русском языке сайта
+        document.title =
+          lang === 'ru' ? 'Богдан Дорофеев | Фронтенд-разработчик' : 'Bogdan Dorofeev | Frontend Developer';
+        var btn = document.getElementById('langToggle');
+        if (btn) {
+          btn.textContent = lang === 'en' ? 'RU' : 'EN';
+          btn.setAttribute('aria-label', lang === 'en' ? 'Переключить на русский' : 'Switch to English');
+        }
+        // язык храним в localStorage, чтобы не слетал после перезагрузки
+        try {
+          localStorage.setItem('lang', lang);
+        } catch (e) {}
+      }
+
+      function currentLang() {
+        var saved = null;
+        try {
+          saved = localStorage.getItem('lang');
+        } catch (e) {}
+        if (saved === 'en' || saved === 'ru') return saved;
+        // не выбрал руками - хотя бы угадываем по языку браузера
+        return (navigator.language || '').toLowerCase().indexOf('ru') === 0 ? 'ru' : 'en';
+      }
+
+      applyLang(currentLang());
+
+      document.getElementById('langToggle').addEventListener('click', function () {
+        applyLang(document.documentElement.lang === 'en' ? 'ru' : 'en');
+      });
+    </script>
+
+    <script>
+      // фон-сетка, реагирует на мышь. делал эту хрень полвечера, пока подобрал
+      // радиусы, кол-во точек и скорость дрейфа. глазом не настраивается, только на глаз.
+      (function () {
+        var canvas = document.getElementById('bg-canvas');
+        if (!canvas) return;
+
+        // если у пользователя стоит "уменьшить движение" в системе - не надо его бесить анимацией
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          canvas.style.display = 'none';
+          return;
+        }
+
+        var ctx = canvas.getContext('2d');
+        var W = 0,
+          H = 0,
+          dots = [],
+          mouse = { x: -9999, y: -9999 };
+        // мышь изначально за экраном, чтобы до первого движения не рисовались
+        // голубые линии из угла экрана (долго с этим мучился, так и не понял почему мозоли)
+        var lineDist = 120,
+          DPR = 1;
+        // зелёный под сайт, голубой и фиолетовый просто чтобы не было однотонно.
+        // в светлой теме чуть темнее, иначе точки сливаются с фоном
+        function palette() {
+          return document.body.classList.contains('lightmode')
+            ? [
+                [27, 94, 32],
+                [8, 88, 110],
+                [87, 41, 163],
+              ]
+            : [
+                [76, 175, 80],
+                [6, 182, 212],
+                [139, 92, 246],
+              ];
+        }
+        var colors = palette();
+
+        // ресайз с учётом retina, без DPR картинка будет мылом на макбуках
+        function resize() {
+          DPR = Math.min(window.devicePixelRatio || 1, 2);
+          W = window.innerWidth;
+          H = window.innerHeight;
+          canvas.width = W * DPR;
+          canvas.height = H * DPR;
+          canvas.style.width = W + 'px';
+          canvas.style.height = H + 'px';
+          ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        }
+
+        function makeDot(i) {
+          return {
+            x: Math.random() * W,
+            y: Math.random() * H,
+            vx: (Math.random() - 0.5) * 0.35,
+            vy: (Math.random() - 0.5) * 0.35,
+            r: Math.random() * 1.8 + 0.7,
+            color: colors[i % colors.length],
+            alpha: 0.3 + Math.random() * 0.5,
+          };
+        }
+
+        // кол-во точек зависит от площади экрана, но уж точно не больше 130
+        function spawn() {
+          var n = Math.round(Math.max(45, Math.min(130, (W * H) / 24000)));
+          dots = [];
+          for (var i = 0; i < n; i++) dots.push(makeDot(i));
+        }
+
+        resize();
+        spawn();
+        window.addEventListener('resize', function () {
+          resize();
+          spawn();
+        });
+        window.addEventListener('pointermove', function (e) {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+        window.addEventListener('pointerout', function () {
+          mouse.x = -9999;
+          mouse.y = -9999;
+        });
+        // поменяли тему - берём новые цвета и заново рассеиваем точки
+        document.addEventListener('themechange', function () {
+          colors = palette();
+          spawn();
+        });
+
+        function strokeLink(alpha, color) {
+          ctx.strokeStyle = 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + alpha.toFixed(3) + ')';
+          ctx.stroke();
+        }
+
+        function step() {
+          ctx.clearRect(0, 0, W, H);
+          var i, j, p, q, dx, dy, d, k;
+
+          for (i = 0; i < dots.length; i++) {
+            p = dots[i];
+
+            // если курсор рядом - мягко отталкиваем точку, сетка как будто "оживает"
+            dx = p.x - mouse.x;
+            dy = p.y - mouse.y;
+            d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 200 && d > 0.001) {
+              k = ((200 - d) / 200) * 0.5;
+              p.vx += (dx / d) * k * 0.12;
+              p.vy += (dy / d) * k * 0.12;
+            } else {
+              // без этой случайности точки замирают и стоят столбом
+              p.vx += (Math.random() - 0.5) * 0.02;
+              p.vy += (Math.random() - 0.5) * 0.02;
+            }
+
+            // сглаживаем скорость, иначе всё дёргается как шаман
+            p.vx *= 0.96;
+            p.vy *= 0.96;
+            var sp = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+            if (sp > 0.9) {
+              p.vx *= 0.9 / sp;
+              p.vy *= 0.9 / sp;
+            }
+
+            p.x += p.vx;
+            p.y += p.vy;
+            // заворачиваем с другой стороны экрана, чтобы не копились на границе
+            if (p.x < -20) p.x = W + 20;
+            else if (p.x > W + 20) p.x = -20;
+            if (p.y < -20) p.y = H + 20;
+            else if (p.y > H + 20) p.y = -20;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+            ctx.fillStyle = 'rgba(' + p.color[0] + ',' + p.color[1] + ',' + p.color[2] + ',' + p.alpha.toFixed(3) + ')';
+            ctx.fill();
+          }
+
+          ctx.lineWidth = 1;
+
+          // соединяем близкие точки: чем ближе - тем ярче линия. O(n^2), но точек мало, терпимо
+          for (i = 0; i < dots.length; i++) {
+            p = dots[i];
+            for (j = i + 1; j < dots.length; j++) {
+              q = dots[j];
+              dx = p.x - q.x;
+              dy = p.y - q.y;
+              d = Math.sqrt(dx * dx + dy * dy);
+              if (d < lineDist) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(q.x, q.y);
+                strokeLink((1 - d / lineDist) * 0.32, colors[0]);
+              }
+            }
+
+            // и ещё голубая линия к курсору, это и есть вся "интерактивность"
+            dx = p.x - mouse.x;
+            dy = p.y - mouse.y;
+            d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 180) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              strokeLink((1 - d / 180) * 0.3, colors[1]);
+            }
+          }
+
+          requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      })();
+    </script>
+
+    <script>
+      /* ============ анимации: reveal по скроллу, герой, параллакс, tilt, свечение ============ */
+      (function () {
+        'use strict';
+        var reduceMotion =
+          window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+
+        var root = document.documentElement;
+        root.classList.add('js');
+        if (reduceMotion) return; // CSS уже всё отключил
+
+        var mobile = root.clientWidth <= 767;
+
+        /* ---- назначаем reveal-классы на блоки, не трогая HTML ---- */
+        function addReveals(sel, anim, delayFn) {
+          [].slice.call(document.querySelectorAll(sel)).forEach(function (el, i) {
+            el.classList.add('anim-reveal', anim);
+            el.style.setProperty('--rd', (delayFn ? delayFn(i) : 0) + 'ms');
+          });
+        }
+        addReveals('.section-title', 'left');
+        addReveals('.section-2 .skill', 'up', function (i) { return 60 + i * 45; });
+        addReveals('.section-3 .tile', 'up', function (i) { return 80 + i * 90; });
+        addReveals('.section-4 .card-wrapper .card', 'up', function (i) { return 80 + i * 90; });
+        addReveals('.section-5 .card-wrapper .card', 'up', function (i) { return 90 + i * 80; });
+        addReveals('footer .content-wrap .title', 'up');
+        addReveals('footer .infos .info-wrapper', 'up', function (i) { return 80 + i * 120; });
+        addReveals('footer .credit', 'up', function () { return 500; });
+
+        /* ---- IntersectionObserver: показываем один раз, по вхождению ---- */
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                  en.target.classList.add('is-in');
+                  io.unobserve(en.target);
+                }
+              });
+            },
+            { threshold: 0.08, rootMargin: '0px 0px -6% 0px' }
+          );
+          [].slice.call(document.querySelectorAll('.anim-reveal')).forEach(function (el) {
+            io.observe(el);
+          });
+        } else {
+          [].slice.call(document.querySelectorAll('.anim-reveal')).forEach(function (el) {
+            el.classList.add('is-in');
+          });
+        }
+        /* футер в самом низу страницы: расширяем зону наблюдения, иначе последний блок
+           у самого края вьюпорта не пересекает порог из-за отрицательного rootMargin */
+        if ('IntersectionObserver' in window) {
+          var ioBottom = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                  en.target.classList.add('is-in');
+                  ioBottom.unobserve(en.target);
+                }
+              });
+            },
+            { threshold: 0, rootMargin: '0px 0px 40px 0px' }
+          );
+          [].slice.call(document.querySelectorAll('footer .anim-reveal')).forEach(function (el) {
+            ioBottom.observe(el);
+          });
+        }
+
+        /* ---- герой: заголовок снизу-вверх по словам ---- */
+        var titleEl = document.querySelector('.banner .title');
+        var subtitleEl = document.querySelector('.banner .sub-title');
+
+        function splitWords(el) {
+          if (!el) return;
+          var text = el.getAttribute('data-raw') || el.textContent;
+          el.setAttribute('data-raw', text);
+          var words = text.split(/\s+/).filter(Boolean);
+          el.innerHTML = words
+            .map(function (w, i) {
+              return '<span class="mask-line"><span style="--md:' + i * 80 + 'ms">' + w + '</span></span>';
+            })
+            .join(' ');
+        }
+        splitWords(titleEl);
+        splitWords(subtitleEl);
+
+        /* перезапуск маски при смене языка (i18n перезаписывает textContent) */
+        var langBtn = document.getElementById('langToggle');
+        if (langBtn) {
+          langBtn.addEventListener('click', function () {
+            setTimeout(function () {
+              splitWords(titleEl);
+              splitWords(subtitleEl);
+            }, 0);
+          });
+        }
+
+        /* остальной герой: мягкое проявление с каскадом */
+        var bannerDesc = document.querySelector('.banner .desc');
+        var heroBtns = [].slice.call(document.querySelectorAll('.banner .download-btns a'));
+        var socials = [].slice.call(document.querySelectorAll('.banner .social-icon-wrapper ul li'));
+
+        if (bannerDesc) {
+          bannerDesc.classList.add('fade-up-load');
+          bannerDesc.style.setProperty('--md', '350ms');
+        }
+        heroBtns.forEach(function (b, i) {
+          b.classList.add('fade-up-load');
+          b.style.setProperty('--md', 450 + i * 120 + 'ms');
+        });
+        socials.forEach(function (s, i) {
+          s.classList.add('fade-load'); // только opacity: иконки позиционируются собственным transform
+          s.style.setProperty('--md', 600 + i * 110 + 'ms');
+        });
+
+        /* ---- полоса прогресса + тень шапки ---- */
+        var progress = document.createElement('div');
+        progress.className = 'scroll-progress';
+        document.body.appendChild(progress);
+
+        var header = document.querySelector('.header');
+
+        /* ---- параллакс: элементы без своих transform/reveal ---- */
+        var parEls = [];
+        if (!mobile) {
+          [
+            ['.banner .content-wrap', 1.12],
+            ['.banner .social-icon-wrapper', 1.25],
+          ].forEach(function (pair) {
+            var el = document.querySelector(pair[0]);
+            if (el) {
+              el.setAttribute('data-parallax', '');
+              el.setAttribute('data-parallax-speed', pair[1]);
+              parEls.push(el);
+            }
+          });
+        }
+
+        var ticking = false;
+        var exp = document.getElementById('experience');
+        function onScroll() {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            ticking = false;
+            var y = window.scrollY || root.scrollTop || 0;
+            var max = (root.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+            if (progress) {
+              progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+            }
+            if (header) {
+              var isLight = document.body.className.indexOf('lightmode') !== -1;
+              header.style.boxShadow =
+                y > 8 ? (isLight ? '0 4px 22px rgba(58,52,44,0.14)' : '0 4px 22px rgba(0,0,0,0.45)') : '';
+            }
+            var viewH = window.innerHeight;
+            if (exp) {
+              var er = exp.getBoundingClientRect();
+              var p = 0;
+              if (er.top <= 0) {
+                var denom = er.height - viewH;
+                if (denom > 0) p = Math.max(0, Math.min(1, -er.top / denom));
+                else p = 1;
+              }
+              planeTarget = p; /* приходит в движение от верха блока */
+            }
+            parEls.forEach(function (el) {
+              var e = el.getBoundingClientRect();
+              if (e.bottom < 0 || e.top > viewH) return;
+              var delta = e.top + e.height / 2 - viewH / 2;
+              var speed = parseFloat(el.getAttribute('data-parallax-speed')) || 0.5;
+              el.style.transform = 'translate3d(0,' + -delta * (speed - 1) * 0.12 + 'px,0)';
+            });
+          });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        onScroll();
+/* ---- самолётик: позиция и направление привязаны к скроллу (плавно) ---- */
+        var planeWrap = document.querySelector('.section-3 .aeroplane-track');
+        var planeIcon = planeWrap ? planeWrap.querySelector('.icon-wrap svg') : null;
+        var planeMax = 0;
+        var planeLast = -1;
+        var planeCur = 0;
+        var planeTarget = -1;
+        function sizePlane() {
+          if (planeWrap) planeMax = Math.max(0, (planeWrap.offsetHeight || 0) - 40);
+        }
+        function movePlane(progress) {
+          if (!planeIcon || planeMax === 0) return;
+          if (progress < 0 || progress > 1) return;
+          var dir;
+          if (planeLast < 0) dir = -1; // первый кадр: нос смотрит вниз
+          else dir = progress < planeLast ? 1 : -1; // скролл вверх — переворачиваем нос к верху
+          planeIcon.style.transform =
+            'translate3d(0,' + (progress * planeMax).toFixed(2) + 'px,0) scaleY(' + dir + ')';
+          planeLast = progress;
+        }
+        function planeTick() {
+          if (planeWrap && planeMax > 0) {
+            if (planeTarget < 0) planeTarget = planeCur;
+            var diff = planeTarget - planeCur;
+            if (Math.abs(diff) < 0.0012) planeCur = planeTarget;
+            else planeCur += diff * 0.045;
+            movePlane(planeCur);
+          }
+          requestAnimationFrame(planeTick);
+        }
+        sizePlane();
+        planeTick();
+        window.addEventListener('resize', sizePlane, { passive: true });
+        window.addEventListener('load', sizePlane);
+        onScroll();
+
+        /* ---- tilt карточек проектов (только десктоп) ---- */
+        var projCards = [].slice.call(document.querySelectorAll('.section-5 .card-wrapper .card'));
+        if (!mobile && !coarse && projCards.length) {
+          /* плавный tilt: цели от мыши, текущие значения догоняют через rAF */
+          var cardT = {};
+          projCards.forEach(function (card) {
+            cardT[card] = { tx: 0, ty: 0, cx: 0, cy: 0, back: false };
+            card.addEventListener('pointerenter', function () {
+              cardT[card].back = false;
+              cardT[card].cx = 0;
+              cardT[card].cy = 0;
+              clearTimeout(cardT[card].tm);
+              /* на время tilt отключаем переход transform — его ведёт lerp */
+              card.style.transition = 'box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
+            card.addEventListener('pointermove', function (e) {
+              if (!card.classList.contains('is-in')) return;
+              var s = cardT[card];
+              if (!s || s.back) return;
+              var r = card.getBoundingClientRect();
+              var px = (e.clientX - r.left) / r.width - 0.5;
+              var py = (e.clientY - r.top) / r.height - 0.5;
+              s.tx = px * 7;
+              s.ty = -py * 5;
+            });
+            card.addEventListener('pointerleave', function () {
+              var s = cardT[card];
+              s.back = true;
+              s.tx = 0;
+              s.ty = 0;
+              /* плавный возврат через CSS-transition, чтобы lerp не дрался с ним */
+              card.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+              card.style.transform =
+                'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+              clearTimeout(s.tm);
+              s.tm = setTimeout(function () {
+                s.back = false;
+                card.style.transition = '';
+              }, 700);
+            });
+          });
+          (function tiltLoop() {
+            projCards.forEach(function (card) {
+              var s = cardT[card];
+              if (!s || s.back) return;
+              s.cx += (s.tx - s.cx) * 0.16;
+              s.cy += (s.ty - s.cy) * 0.16;
+              if (Math.abs(s.tx - s.cx) < 0.02 && Math.abs(s.ty - s.cy) < 0.02) {
+                s.cx = s.tx;
+                s.cy = s.ty;
+              }
+              card.style.transform =
+                'perspective(900px) rotateX(' + s.cy.toFixed(2) + 'deg) rotateY(' + s.cx.toFixed(2) + 'deg) translateZ(0)';
+            });
+            requestAnimationFrame(tiltLoop);
+          })();
+
+          /* ---- tilt фото в баннере ---- */
+          var imgWrap = document.querySelector('.banner .content-wrap .right-wrap .img-wrapper');
+          if (imgWrap) {
+            imgWrap.addEventListener('pointermove', function (e) {
+              var r = imgWrap.getBoundingClientRect();
+              var px = (e.clientX - r.left) / r.width - 0.5;
+              var py = (e.clientY - r.top) / r.height - 0.5;
+              imgWrap.style.setProperty('--rx', -py * 7 + 'deg');
+              imgWrap.style.setProperty('--ry', px * 9 + 'deg');
+            });
+            imgWrap.addEventListener('pointerleave', function () {
+              imgWrap.style.setProperty('--rx', '0deg');
+              imgWrap.style.setProperty('--ry', '0deg');
+            });
+          }
+
+          /* ---- мягкое свечение за курсором ---- */
+          var glow = document.createElement('div');
+          glow.className = 'cursor-glow';
+          document.body.appendChild(glow);
+          root.classList.add('has-cursor');
+          var gx = -9999,
+            gy = -9999,
+            cx = -9999,
+            cy = -9999;
+          document.addEventListener('pointermove', function (e) {
+            gx = e.clientX;
+            gy = e.clientY;
+          }, { passive: true });
+          (function glowLoop() {
+            cx += (gx - cx) * 0.095;
+            cy += (gy - cy) * 0.095;
+            glow.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+            requestAnimationFrame(glowLoop);
+          })();
+        }
+      })();
+    </script>
+    <script>
+      // ripple-волна по клику на интерактивных элементах
+      (function () {
+        if (
+          window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ) {
+          return;
+        }
+        var targets =
+          '.download-btn, .section-2 .skill, .section-3 .tile, .section-4 .card, .section-5 .card, .header nav a';
+        document.addEventListener(
+          'pointerdown',
+          function (e) {
+            var el = e.target.closest(targets);
+            if (!el) return;
+            if (getComputedStyle(el).position === 'static') {
+              el.style.position = 'relative';
+            }
+            var r = el.getBoundingClientRect();
+            var d = document.createElement('span');
+            d.className = 'px-ripple';
+            d.style.left = e.clientX - r.left + 'px';
+            d.style.top = e.clientY - r.top + 'px';
+            el.appendChild(d);
+            setTimeout(function () {
+              d.remove();
+            }, 800);
+          },
+          { passive: true }
+        );
+      })();
+    </script>
+  </body>
+</html>
