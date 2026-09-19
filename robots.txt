@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://dorofeevb1.github.io/MyResume/sitemap.xml
